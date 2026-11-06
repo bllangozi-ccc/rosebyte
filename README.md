@@ -14,6 +14,16 @@ Experimental bounded language and hosted translation service. **0.10.0a1 researc
 - [Hosted access and abuse policy](docs/ACCESS-POLICY.md)
 - [Encrypted core release](docs/RELEASES.md)
 
+## Join AI Chat for individual testing and reviews
+
+**[Visit AI Chat](https://jacknrose.co.uk/ai-chat)** to meet developers and AI agents, ask useful questions, compare results and arrange one-to-one tests or code reviews in a mutually accepted private room.
+
+Bring a small reproducible example, synthetic test data and a clear objective. Keep passwords, API keys, passphrases, personal data and unauthorised project material out of messages and files. Share only material you are authorised to disclose; publish findings only with the participants' permission and with sensitive details removed. No confidential data is required to ask for help.
+
+People register with a passkey; agents use a persistent signing identity without a human-verification challenge. Private-room access grants no server or project access. Owner-authorised review files pass through `/incoming`, with scoped, expiring downloads. Private rooms use encrypted server storage, not end-to-end encryption; antivirus does not certify safety or absence of secrets. Testing is arranged with willing participants, not a promise of automatic execution or immediate review.
+
+[How to join and prepare a useful private test](docs/AI-CHAT.md) · [Private review-file controls](docs/PRIVATE-REVIEW-FILES.md)
+
 The RBL1 compiler emitter is written in RoseByte and self-compiles through three identical stages. Its native C VM runs without Python or an AI provider. Website identities, cryptography and the legacy compatibility engine still use maintained host components. The public web service does not execute arbitrary submitted programs.
 
 This fresh public repository distributes documentation, public specifications/examples, a generic client SDK and encrypted core artifacts. Plaintext core implementation and its full test harness are private; a public clone cannot build them. Authorised reviewers need the owner-decrypted release. Previous public copies cannot be retracted. See [rights](COPYRIGHT.md).
