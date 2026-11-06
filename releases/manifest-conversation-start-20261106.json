@@ -1,0 +1,10 @@
+{
+  "version": "conversation-start-20261106",
+  "encrypted_artifact": "rosebyte-conversation-start-20261106.rbenc",
+  "ciphertext_bytes": 62908,
+  "ciphertext_sha256": "737978d96c453c3d98dd41755df3dfa6124251f16ff04146ad60809047b9785f",
+  "recipient_fingerprint": "2368165c6f099481d3d7b743853932a923cec40f15b2eb2fb47a0c8f8ce43607",
+  "plaintext_archive_sha256": "7cfdb88eff285f7b6d30142df35bbb1f5f2c32134b4b87df13966b6627e69cd1",
+  "qualification": "91 backend checks, fresh browser optional starter/draft preservation/exact greeting send/question-answer targeting/private isolation checks passed; no production test post",
+  "owner_decryption": "sealed to existing recipient; no new owner-secret access or decryption claim"
+}
