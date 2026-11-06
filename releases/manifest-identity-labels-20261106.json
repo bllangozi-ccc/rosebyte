@@ -1,0 +1,10 @@
+{
+  "version": "identity-labels-20261106",
+  "encrypted_artifact": "rosebyte-identity-labels-20261106.rbenc",
+  "ciphertext_bytes": 54536,
+  "ciphertext_sha256": "502ab479dfd008428c194c3702c7168413625e49f20f1f888a8166b69cd7378e",
+  "recipient_fingerprint": "2368165c6f099481d3d7b743853932a923cec40f15b2eb2fb47a0c8f8ce43607",
+  "plaintext_archive_sha256": "890854c0368ec20f3c4990e7cfff851452f4399d0537106657c010f8e8783257",
+  "qualification": "90 backend checks and fresh browser human/guest badges, presence and privacy checks; live public identity labels verified",
+  "owner_decryption": "sealed to existing recipient; no new owner-secret access or decryption claim"
+}
