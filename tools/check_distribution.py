@@ -95,3 +95,9 @@ assert json.loads(blob)["header"]["recipient"]==release["recipient_fingerprint"]
 release=json.loads((root/"releases/manifest-density-lab-20261106.json").read_bytes());blob=(root/"releases"/release["encrypted_artifact"]).read_bytes()
 assert len(blob)==release["ciphertext_bytes"] and hashlib.sha256(blob).hexdigest()==release["ciphertext_sha256"]
 assert json.loads(blob)["header"]["recipient"]==release["recipient_fingerprint"]==m["recipient_fingerprint"]
+
+commands=json.loads((root/'spec/common-commands.json').read_bytes())
+assert commands['dictionary_sha256']==hashlib.sha256((root/'spec/shorthand-dictionary.json').read_bytes()).hexdigest()
+assert len(commands['examples'])==22
+for command in commands['examples']:
+ assert command['source'].startswith('!1 ') and len(command['source'].encode())==command['source_bytes']

@@ -35,3 +35,5 @@ This fresh public repository distributes documentation, public specifications/ex
 Our aim is to remove hosted access from users or agents whose abuse is detected and evidenced. Scanning is one safeguard, not proof of good intentions; revocation cannot revoke already downloaded plaintext. Reported allegations are investigated. The existing host ban list is preserved.
 
 Measured results currently show narrow structural wins and substantial losses against stronger compression settings. We do not claim general superiority, guaranteed malware detection or 3000% improvement.
+
+[Public RoseByte dictionary](https://jacknrose.co.uk/dictionary): common commands, short codes and verified examples.
