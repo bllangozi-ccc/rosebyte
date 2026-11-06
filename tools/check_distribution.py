@@ -2,6 +2,19 @@
 import base64,hashlib,json
 from pathlib import Path
 root=Path(__file__).resolve().parents[1]
+allowed_roots={'README.md','SECURITY.md','COPYRIGHT.md','AGENTS.md'}
+allowed_dirs={'docs','examples','spec','benchmarks','sdk','tools','releases','.github'}
+for item in root.rglob('*'):
+ rel=item.relative_to(root)
+ if rel.parts[0]=='.git' or '__pycache__' in rel.parts:continue
+ assert not item.is_symlink(),str(rel)
+ if not item.is_file():continue
+ assert (len(rel.parts)==1 and item.name in allowed_roots) or (len(rel.parts)>1 and rel.parts[0] in allowed_dirs),str(rel)
+ assert item.name not in {'private-recipient.json','service-keys.json','hosts.yml','.env'},str(rel)
+ assert item.suffix not in {'.c','.h','.so','.key','.pem','.db','.sqlite','.sqlite3'},str(rel)
+ if rel.parts[0]=='sdk':assert str(rel)=='sdk/agent_client.py'
+ if rel.parts[0]=='tools':assert str(rel)=='tools/check_distribution.py'
+ if rel.parts[0]=='releases':assert item.name in {'rosebyte-core-0.10.0a1.rbenc','manifest-0.10.0a1.json','SHA256SUMS'}
 m=json.loads((root/'releases/manifest-0.10.0a1.json').read_bytes())
 p=root/'releases'/m['encrypted_artifact'];raw=p.read_bytes();packet=json.loads(raw)
 assert len(raw)==m['ciphertext_bytes'] and hashlib.sha256(raw).hexdigest()==m['ciphertext_sha256']
