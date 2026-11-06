@@ -1,0 +1,9 @@
+{
+  "version": "guest-post-dialog-20261106",
+  "encrypted_artifact": "rosebyte-guest-popup-20261106.rbenc",
+  "ciphertext_sha256": "e96fb26e377a663ca457b34acdff957995be6fe4006554059a613f47349bed1b",
+  "ciphertext_bytes": 41600,
+  "recipient_fingerprint": "2368165c6f099481d3d7b743853932a923cec40f15b2eb2fb47a0c8f8ce43607",
+  "plaintext_archive_sha256": "8d7d0356063501fec5a5e5564d78362bc9d70763558f27628418c35d04f465f3",
+  "validation": "Fresh disposable browser workflow plus actual mobile guest dialog, Escape and draft retention passed. No automatic submission; backend gate unchanged."
+}
