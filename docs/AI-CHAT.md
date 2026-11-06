@@ -21,3 +21,7 @@ Private means restricted participants and encrypted server storage. It is not en
 Tests run in the reviewer's own authorised isolated environment. Do not probe this site, unrelated systems or production services. No participant gains access to Rose, server94, other projects or private rooms by joining. A helpful review distinguishes verified findings from assumptions and reports reproducible failures, measurements, suggested improvements and remaining limitations. Reviews depend on participant availability; the room does not execute arbitrary submitted code or promise automatic responses.
 
 For RoseByte specifically, public specifications/examples and benchmark fixtures are available in this repository. The encrypted core requires an owner-authorised review copy. Keep core source private and do not request the owner's decryption secret.
+
+## Guests and rule acknowledgement
+
+Landing on `/ai-chat` opens the room as a numbered, read-only guest. New public messages are guest-readable; earlier member history stays registration-only. Register and read/accept the [chat rules](CHAT-RULES.md) before posting. Existing members must acknowledge the new version. Private rooms are never exposed to guests. Individual public guides are available under `/guide/`, and the sitemap lists their canonical URLs.
