@@ -1,0 +1,239 @@
+{
+  "languages": {
+    "RBL1": {
+      "expression_tags": {
+        "call": 8,
+        "false": 1,
+        "int64": 3,
+        "list": 5,
+        "null": 0,
+        "primitive": 7,
+        "text": 4,
+        "true": 2,
+        "variable": 6
+      },
+      "limits": {
+        "buffer_bytes": 262144,
+        "depth": 64,
+        "fuel": 2000000,
+        "items": 4096,
+        "nodes": 16384,
+        "source_bytes": 65536
+      },
+      "magic_hex": "52424c4201",
+      "primitive_opcodes": [
+        {
+          "arity": 2,
+          "id": 0,
+          "name": "add"
+        },
+        {
+          "arity": 2,
+          "id": 1,
+          "name": "sub"
+        },
+        {
+          "arity": 2,
+          "id": 2,
+          "name": "mul"
+        },
+        {
+          "arity": 2,
+          "id": 3,
+          "name": "div"
+        },
+        {
+          "arity": 2,
+          "id": 4,
+          "name": "mod"
+        },
+        {
+          "arity": 2,
+          "id": 5,
+          "name": "eq"
+        },
+        {
+          "arity": 2,
+          "id": 6,
+          "name": "lt"
+        },
+        {
+          "arity": 2,
+          "id": 7,
+          "name": "le"
+        },
+        {
+          "arity": 1,
+          "id": 8,
+          "name": "not"
+        },
+        {
+          "arity": 2,
+          "id": 9,
+          "name": "and"
+        },
+        {
+          "arity": 2,
+          "id": 10,
+          "name": "or"
+        },
+        {
+          "arity": 1,
+          "id": 11,
+          "name": "len"
+        },
+        {
+          "arity": 2,
+          "id": 12,
+          "name": "at"
+        },
+        {
+          "arity": 2,
+          "id": 13,
+          "name": "get"
+        },
+        {
+          "arity": 1,
+          "id": 14,
+          "name": "keys"
+        },
+        {
+          "arity": 1,
+          "id": 15,
+          "name": "kind"
+        },
+        {
+          "arity": 2,
+          "id": 16,
+          "name": "concat"
+        },
+        {
+          "arity": 2,
+          "id": 17,
+          "name": "append"
+        },
+        {
+          "arity": 1,
+          "id": 18,
+          "name": "utf8"
+        },
+        {
+          "arity": 1,
+          "id": 19,
+          "name": "from_utf8"
+        },
+        {
+          "arity": 1,
+          "id": 20,
+          "name": "parse_json"
+        },
+        {
+          "arity": 1,
+          "id": 21,
+          "name": "u8"
+        },
+        {
+          "arity": 1,
+          "id": 22,
+          "name": "u16"
+        },
+        {
+          "arity": 1,
+          "id": 23,
+          "name": "u32"
+        },
+        {
+          "arity": 1,
+          "id": 24,
+          "name": "i64"
+        },
+        {
+          "arity": 1,
+          "id": 25,
+          "name": "fail"
+        },
+        {
+          "arity": 3,
+          "id": 26,
+          "name": "slice"
+        },
+        {
+          "arity": 2,
+          "id": 27,
+          "name": "split"
+        },
+        {
+          "arity": 2,
+          "id": 28,
+          "name": "join"
+        },
+        {
+          "arity": 1,
+          "id": 29,
+          "name": "html_escape"
+        }
+      ],
+      "statement_tags": {
+        "for": 35,
+        "if": 34,
+        "let": 32,
+        "return": 36,
+        "set": 33
+      },
+      "value_types": [
+        "null",
+        "bool",
+        "int",
+        "text",
+        "bytes",
+        "list",
+        "object"
+      ]
+    },
+    "RBT2": {
+      "arguments": {
+        "csv": [],
+        "emit": [],
+        "find": [
+          "text"
+        ],
+        "group_stats": [
+          "group",
+          "value"
+        ],
+        "limit": [
+          "count"
+        ],
+        "read": [
+          "path"
+        ],
+        "sort_by": [
+          "field",
+          "order"
+        ],
+        "where_any": [
+          "field1",
+          "compare1",
+          "value1",
+          "field2",
+          "compare2",
+          "value2"
+        ]
+      },
+      "magic_hex": "52425432",
+      "opcodes": {
+        "csv": 5,
+        "emit": 4,
+        "find": 2,
+        "group_stats": 7,
+        "limit": 3,
+        "read": 1,
+        "sort_by": 8,
+        "where_any": 6
+      }
+    }
+  },
+  "schema": "rosebyte-public-dictionary-1",
+  "security": "Public language semantics, not an encryption dictionary, credential or authority grant. Project compression dictionaries remain private unless their owner publishes them.",
+  "version": "2026-11-06.1"
+}

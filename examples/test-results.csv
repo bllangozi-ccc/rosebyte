@@ -1,0 +1,8 @@
+check,stage,status,duration_ms
+parser-roundtrip,language,pass,4
+csv-schema,language,pass,8
+legacy-invalid-path,language,pass,3
+bomb-rejected,codec,pass,145
+private-room-isolation,web,pass,420
+example-regression,web,fail,180
+sample-slow-test,codec,pass,3201

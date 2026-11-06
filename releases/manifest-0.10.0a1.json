@@ -1,0 +1,25 @@
+{
+  "format": "RB-PUBLIC-RELEASE-MANIFEST-1",
+  "version": "0.10.0a1",
+  "date": "2026-11-06",
+  "encrypted_artifact": "rosebyte-core-0.10.0a1.rbenc",
+  "ciphertext_sha256": "8550a7988af074c535fe8f3ecb44d84745a6bd388c97c9645332c6a67cd3b8cf",
+  "ciphertext_bytes": 1033960,
+  "plaintext_archive_sha256": "5a4498f506e3d71f100eb7399ff7a96105c2855df0fd988d965de771869a7f7c",
+  "plaintext_archive_bytes": 775070,
+  "recipient_fingerprint": "2368165c6f099481d3d7b743853932a923cec40f15b2eb2fb47a0c8f8ce43607",
+  "encryption": "X25519-HKDF-SHA256-AES256GCM",
+  "core_commit": "6be3bc3b066015c66b0b56c9dd6620d3ece80ac1",
+  "qualification": {
+    "language_tests": 54,
+    "hosted_tests": 62,
+    "real_native_gate_and_bootstrap": true,
+    "independent_review": "pending",
+    "owner_release_decryption": "pending interactive owner verification"
+  },
+  "limitations": [
+    "Previously public plaintext cannot be retracted",
+    "Encryption does not prove publisher identity; obtain the manifest from the trusted publisher",
+    "Native public guest execution remains disabled"
+  ]
+}

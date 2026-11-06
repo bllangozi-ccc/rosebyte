@@ -1,0 +1,1 @@
+{"reports":[{"name":"failed_or_slow","source":"read \"test-results.csv\"\ncsv\nwhere-any status ne pass duration_ms gt 3000\ngroup-stats stage duration_ms\nsort-by sum desc\nemit\n"},{"name":"timing_by_stage","source":"read \"test-results.csv\"\ncsv\ngroup-stats stage duration_ms\nsort-by sum desc\nemit\n"}]}

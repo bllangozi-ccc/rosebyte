@@ -1,0 +1,163 @@
+{
+  "version": "RBL1",
+  "entry": "main",
+  "functions": [
+    {
+      "name": "check_report",
+      "params": [
+        "report"
+      ],
+      "body": [
+        {
+          "if": {
+            "op": "not",
+            "args": [
+              {
+                "op": "get",
+                "args": [
+                  {
+                    "var": "report"
+                  },
+                  "passed"
+                ]
+              }
+            ]
+          },
+          "then": [
+            {
+              "return": false
+            }
+          ],
+          "else": []
+        },
+        {
+          "if": {
+            "op": "lt",
+            "args": [
+              {
+                "op": "get",
+                "args": [
+                  {
+                    "var": "report"
+                  },
+                  "duration_ms"
+                ]
+              },
+              0
+            ]
+          },
+          "then": [
+            {
+              "return": false
+            }
+          ],
+          "else": []
+        },
+        {
+          "return": true
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "params": [
+        "reports"
+      ],
+      "body": [
+        {
+          "let": "count",
+          "value": 0
+        },
+        {
+          "let": "passed",
+          "value": true
+        },
+        {
+          "for": "report",
+          "in": {
+            "var": "reports"
+          },
+          "body": [
+            {
+              "set": "count",
+              "value": {
+                "op": "add",
+                "args": [
+                  {
+                    "var": "count"
+                  },
+                  1
+                ]
+              }
+            },
+            {
+              "if": {
+                "op": "not",
+                "args": [
+                  {
+                    "call": "check_report",
+                    "args": [
+                      {
+                        "var": "report"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "then": [
+                {
+                  "set": "passed",
+                  "value": false
+                }
+              ],
+              "else": []
+            }
+          ]
+        },
+        {
+          "if": {
+            "op": "eq",
+            "args": [
+              {
+                "var": "count"
+              },
+              0
+            ]
+          },
+          "then": [
+            {
+              "set": "passed",
+              "value": false
+            }
+          ],
+          "else": []
+        },
+        {
+          "if": {
+            "var": "passed"
+          },
+          "then": [
+            {
+              "return": [
+                "ready",
+                {
+                  "var": "count"
+                }
+              ]
+            }
+          ],
+          "else": [
+            {
+              "return": [
+                "needs_work",
+                {
+                  "var": "count"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+[
+  [
+    {
+      "passed": true,
+      "duration_ms": 13
+    },
+    {
+      "passed": true,
+      "duration_ms": 34
+    },
+    {
+      "passed": true,
+      "duration_ms": 8
+    }
+  ]
+]

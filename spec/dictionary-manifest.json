@@ -1,0 +1,8 @@
+{
+  "version": "2026-11-06.1",
+  "sha256": {
+    "dictionary.json": "30d37adbdb7928cd4703b8a595a519bb182db9436b4b4322e19a858ab250134e",
+    "dictionary.rbl.json": "5b59acccc996a598983d12b9d3f901afeadb0ab2568ec4974bd107ed62d4922e",
+    "dictionary.rblb": "a317045c1c0da4bf7bca5476f363d7a4e698a412aac5798fe99c5d544acdebc8"
+  }
+}
