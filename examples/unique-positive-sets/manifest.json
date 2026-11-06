@@ -1,0 +1,10 @@
+{
+  "files": {
+    "sum.rblb": "3792b12efb781e341434057b6da3aca13ed3c9598f740adaa44406a97b63f1f7",
+    "README.md": "0b864ad95eab30abe276140383ba25cd5597c0ac1fad29d18086fcfc97c16de0",
+    "reference.py": "aefa449c5dff913db63c39071b6a91915fea735fb3ac8f7e37cf110928216386",
+    "measurements.json": "e10b01f627053e4c1c1b6b1dcc4da79652c0357d22eba1e7737ead52850df738",
+    "sum.rbs": "25eccc62ed5788b5cc9fb9685a79f394e5bf7793e8632cae198e46cc7ef36064",
+    "compact-reference.py": "6babe982d378331fca07a9a6394a8cb9deb1cb6bdc3d8a75e4c4da0a05b37f2a"
+  }
+}

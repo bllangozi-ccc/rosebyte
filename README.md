@@ -1,6 +1,6 @@
 # RoseByte
 
-Experimental bounded language and hosted translation service. **0.11.0a1 shorthand research preview. Underlying 0.10.2a1 Unicode/equality corrections passed a scoped independent retest; the new shorthand frontend awaits its separate independent review.**
+Experimental bounded language and hosted translation service. **0.12.0a1 set-extension research preview. Underlying 0.10.2a1 Unicode/equality corrections passed a scoped independent retest; the newer shorthand/set frontends await their separate independent review.**
 
 - [Symbol-and-number RoseByte syntax, dictionary and measured comparisons](docs/SHORTHAND.md)
 - [Rebuilt shorthand Audit Lens](https://jacknrose.co.uk/tools/audit-lens-shorthand)

@@ -1,0 +1,58 @@
+{
+  "cases_per_function": 1007,
+  "results": {
+    "old-RBS1": {
+      "bytes": 89,
+      "compressed": {
+        "raw": 89,
+        "zlib9": 83,
+        "brotli11": 75,
+        "zstd19": 84
+      },
+      "bytecode_bytes": 223,
+      "reference_execution_ms": {
+        "samples": 11,
+        "median": 45.456022,
+        "min": 44.545348,
+        "max": 50.656159,
+        "input": "256 integers,128 unique, same runtime excluding compile and external scanning"
+      }
+    },
+    "new-RBS2": {
+      "bytes": 46,
+      "compressed": {
+        "raw": 46,
+        "zlib9": 54,
+        "brotli11": 48,
+        "zstd19": 52
+      },
+      "bytecode_bytes": 118,
+      "reference_execution_ms": {
+        "samples": 11,
+        "median": 0.818346,
+        "min": 0.79489,
+        "max": 0.974169,
+        "input": "256 integers,128 unique, same runtime excluding compile and external scanning"
+      }
+    },
+    "original-Python": {
+      "bytes": 70,
+      "compressed": {
+        "raw": 70,
+        "zlib9": 73,
+        "brotli11": 69,
+        "zstd19": 72
+      }
+    },
+    "compact-Python-lambda": {
+      "bytes": 35,
+      "compressed": {
+        "raw": 35,
+        "zlib9": 43,
+        "brotli11": 39,
+        "zstd19": 44
+      }
+    }
+  },
+  "scope": "Identical inputs/codecs; original and compact Python both retained. Reference timings, not native-vs-Python speed or full authenticated delivery. Cold dictionary and install costs excluded from this payload table."
+}

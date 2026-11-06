@@ -1,0 +1,11 @@
+{
+  "version": "0.12.0a1",
+  "encrypted_artifact": "rosebyte-core-0.12.0a1.rbenc",
+  "ciphertext_bytes": 241160,
+  "ciphertext_sha256": "267e9fed9ded4f5be91cc0cd5e2f89cff25696b313e6e495efc75f657ee08ac5",
+  "recipient_fingerprint": "2368165c6f099481d3d7b743853932a923cec40f15b2eb2fb47a0c8f8ce43607",
+  "plaintext_archive_sha256": "6b48486947a15d1aabed0aa9220002b87c886c036db702cb473f03736eb8ba8d",
+  "qualification": "76core/native/sanitizer tests,87hosted checks,additional2 full credential-ban checks and metadata test, fresh browser and live incoming-gated compile/native-run/bootstrap passed",
+  "independent_set_review": "pending",
+  "owner_decryption": "same verified recipient, no new secret access or decryption claim"
+}

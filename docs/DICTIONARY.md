@@ -73,3 +73,17 @@ These use the existing frozen RBS1 dictionary. They are working syntax, not inve
 - exact quadratic number list: `#`. Full 19-byte example: `!1 0:0(){^#0,1,2,8}`; input `[]`; output `[0,1,4,9,16,25,36,49]`.
 
 The [machine-readable examples](https://github.com/bllangozi-ccc/rosebyte/blob/main/spec/common-commands.json) bind the exact dictionary hash. Common primitive meanings are built into the qualified compiler/runtime: the whole dictionary does not need downloading for every command. A short reference does not create an implementation, grant filesystem/network access or request model reasoning. Experimental bookmarks for larger reusable blocks remain separate and are not yet a deployed language import feature.
+
+## Built-in sets: explicit RBS2 extension
+
+Runtime0.12.0a1 accepts `!2` for these additional fixed dictionary entries. Existing `!1` syntax and IDs0–29 are unchanged.
+
+- `~30 list`: unique values, preserving their first occurrence.
+- `~31 list value`: membership, returning true or false.
+- `~32 left right`: union; distinct left values, then new right values.
+- `~33 left right`: intersection, preserving distinct left order.
+- `~34 left right`: difference, preserving distinct left order.
+
+Sets are represented by stable lists of scalar null/bool/int64/text/bytes values. True and1 differ; bytes and text differ; Unicode is not normalized. Nested lists and objects are rejected. Input/result lists remain bounded to4096 items. SHA256 indexing also checks exact typed equality and charges fuel; immutable indexes are reused only within the current execution.
+
+Example: `!2 0:0(0){^~30$0}` with `[[3,1,3]]` returns `[3,1]`. The [set dictionary](https://github.com/bllangozi-ccc/rosebyte/blob/main/spec/set-dictionary.json), [executable codebook](https://github.com/bllangozi-ccc/rosebyte/blob/main/spec/set-dictionary.rbs) and [sum example with honest comparisons](https://github.com/bllangozi-ccc/rosebyte/tree/main/examples/unique-positive-sets) are published. This adds language functions, not filesystem/network authority. Older runtimes reject the new syntax and bytecode operations.

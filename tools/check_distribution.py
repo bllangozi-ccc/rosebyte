@@ -14,7 +14,7 @@ for item in root.rglob('*'):
  assert item.suffix not in {'.c','.h','.so','.key','.pem','.db','.sqlite','.sqlite3'},str(rel)
  if rel.parts[0]=='sdk':assert str(rel)=='sdk/agent_client.py'
  if rel.parts[0]=='tools':assert str(rel)=='tools/check_distribution.py'
- if rel.parts[0]=='releases':assert item.name in {'rosebyte-core-0.10.0a1.rbenc','manifest-0.10.0a1.json','rosebyte-inbox-update-20261106.rbenc','manifest-inbox-20261106.json','rosebyte-inbox-update-20261106-r2.rbenc','manifest-inbox-20261106-r2.json','rosebyte-private-transfer-20261106.rbenc','manifest-private-transfer-20261106.json','rosebyte-reference-fix-0.10.1a1.rbenc','manifest-reference-0.10.1a1.json','rosebyte-native-fix-0.10.2a1.rbenc','manifest-native-0.10.2a1.json','rosebyte-guest-chat-20261106.rbenc','manifest-guest-chat-20261106.json','rosebyte-guest-popup-20261106.rbenc','manifest-guest-popup-20261106.json','rosebyte-audit-lens-hosted-20261106.rbenc','manifest-audit-lens-hosted-20261106.json','rosebyte-core-0.11.0a1.rbenc','manifest-0.11.0a1.json','rosebyte-shorthand-hosted-20261106.rbenc','manifest-shorthand-hosted-20261106.json','rosebyte-guest-participation-20261106.rbenc','manifest-guest-participation-20261106.json','rosebyte-density-lab-20261106.rbenc','manifest-density-lab-20261106.json','rosebyte-public-dictionary-20261106.rbenc','manifest-public-dictionary-20261106.json','rosebyte-one-click-20261106.rbenc','manifest-one-click-20261106.json','rosebyte-public-members-20261106.rbenc','manifest-public-members-20261106.json','SHA256SUMS'}
+ if rel.parts[0]=='releases':assert item.name in {'rosebyte-core-0.10.0a1.rbenc','manifest-0.10.0a1.json','rosebyte-inbox-update-20261106.rbenc','manifest-inbox-20261106.json','rosebyte-inbox-update-20261106-r2.rbenc','manifest-inbox-20261106-r2.json','rosebyte-private-transfer-20261106.rbenc','manifest-private-transfer-20261106.json','rosebyte-reference-fix-0.10.1a1.rbenc','manifest-reference-0.10.1a1.json','rosebyte-native-fix-0.10.2a1.rbenc','manifest-native-0.10.2a1.json','rosebyte-guest-chat-20261106.rbenc','manifest-guest-chat-20261106.json','rosebyte-guest-popup-20261106.rbenc','manifest-guest-popup-20261106.json','rosebyte-audit-lens-hosted-20261106.rbenc','manifest-audit-lens-hosted-20261106.json','rosebyte-core-0.11.0a1.rbenc','manifest-0.11.0a1.json','rosebyte-shorthand-hosted-20261106.rbenc','manifest-shorthand-hosted-20261106.json','rosebyte-guest-participation-20261106.rbenc','manifest-guest-participation-20261106.json','rosebyte-density-lab-20261106.rbenc','manifest-density-lab-20261106.json','rosebyte-public-dictionary-20261106.rbenc','manifest-public-dictionary-20261106.json','rosebyte-one-click-20261106.rbenc','manifest-one-click-20261106.json','rosebyte-public-members-20261106.rbenc','manifest-public-members-20261106.json','rosebyte-core-0.12.0a1.rbenc','manifest-0.12.0a1.json','rosebyte-sets-hosted-20261106.rbenc','manifest-sets-hosted-20261106.json','SHA256SUMS'}
 m=json.loads((root/'releases/manifest-0.10.0a1.json').read_bytes())
 p=root/'releases'/m['encrypted_artifact'];raw=p.read_bytes();packet=json.loads(raw)
 assert len(raw)==m['ciphertext_bytes'] and hashlib.sha256(raw).hexdigest()==m['ciphertext_sha256']
@@ -121,3 +121,18 @@ for name,want in json.loads((unique/'manifest.json').read_bytes())['files'].item
 r=json.loads((unique/'RESULT.json').read_bytes())
 assert r['compressed_Python_still_smaller'] and not r['dictionary_or_opcode_changes']
 assert len(json.loads((unique/'cases.json').read_bytes()))==1007
+
+release=json.loads((root/"releases/manifest-0.12.0a1.json").read_bytes());blob=(root/"releases"/release["encrypted_artifact"]).read_bytes()
+assert len(blob)==release["ciphertext_bytes"] and hashlib.sha256(blob).hexdigest()==release["ciphertext_sha256"]
+assert json.loads(blob)["header"]["recipient"]==release["recipient_fingerprint"]==m["recipient_fingerprint"]
+
+release=json.loads((root/"releases/manifest-sets-hosted-20261106.json").read_bytes());blob=(root/"releases"/release["encrypted_artifact"]).read_bytes()
+assert len(blob)==release["ciphertext_bytes"] and hashlib.sha256(blob).hexdigest()==release["ciphertext_sha256"]
+assert json.loads(blob)["header"]["recipient"]==release["recipient_fingerprint"]==m["recipient_fingerprint"]
+
+sets=json.loads((root/'spec/set-dictionary.json').read_bytes())
+assert sets['base_dictionary_sha256']==hashlib.sha256((root/'spec/shorthand-dictionary.json').read_bytes()).hexdigest()
+assert [v['id'] for v in sets['primitive_ids']]==list(range(30,35))
+for name,want in json.loads((root/'spec/set-dictionary-manifest.json').read_bytes())['sha256'].items():assert hashlib.sha256((root/'spec'/name).read_bytes()).hexdigest()==want
+for name,want in json.loads((root/'examples/unique-positive-sets/manifest.json').read_bytes())['files'].items():
+ assert '/' not in name and hashlib.sha256((root/'examples/unique-positive-sets'/name).read_bytes()).hexdigest()==want
