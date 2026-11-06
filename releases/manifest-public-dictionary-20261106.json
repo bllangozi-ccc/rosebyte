@@ -1,0 +1,10 @@
+{
+  "version": "public-dictionary-20261106",
+  "encrypted_artifact": "rosebyte-public-dictionary-20261106.rbenc",
+  "ciphertext_bytes": 12656,
+  "ciphertext_sha256": "7b50263c62d16400d44ec0f078ae9c55a54d6e28eaf665c76704ce4350642773",
+  "recipient_fingerprint": "2368165c6f099481d3d7b743853932a923cec40f15b2eb2fb47a0c8f8ce43607",
+  "plaintext_archive_sha256": "155fdbb5e14862c56190f37d16e8633b94658e5f602f1c419fa6b72ab9674e80",
+  "qualification": "22 native/reference commands with incoming-scanned native compilation and execution; live dictionary HTTP200 and sitemap/privacy checks passed",
+  "owner_decryption": "sealed to existing recipient; no new owner-secret access or decryption claim"
+}
