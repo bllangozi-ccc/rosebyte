@@ -34,7 +34,7 @@ Run the bundled application from its installed share directory, choosing a new
 output name each time:
 
 ```sh
-cd /opt/rosebyte-native/releases/0.10.0a1/share
+cd /opt/rosebyte-native/releases/0.10.2a1/share
 rosebyte-native compile examples/release-check.rbl.json /tmp/my-release-check.rblb
 rosebyte-native run /tmp/my-release-check.rblb examples/release-inputs.json
 # {"result":["ready",3]}
@@ -94,6 +94,25 @@ bytecode tests reduce uncertainty but do not establish absence of vulnerabilitie
 See [Architect's review checklist](ARCHITECT-REVIEW.md).
 
 
-## json-c compatibility finding
+## Unicode decoder qualification — fixed in native0.10.2a1
 
-The independent reviewer reproduced rejection of valid raw UTF-8 source with unpatched json-c0.18, although escaped equivalents work. Our0.17 build accepts both; explicit raw/escaped source regression cases now cover this path. This is an unresolved compatibility limitation, not a completed compiler acceptance on0.18. Do not disable strict syntax/UTF-8 validation to suppress the error. Require a supported maintained or distribution-patched library and rerun the raw-source tests before deploying on a different toolchain. Upstream tracked the signed-character strict-parser issue in [json-c#875](https://github.com/json-c/json-c/issues/875) and [#892](https://github.com/json-c/json-c/issues/892). A reviewer candidate remains under evaluation; no cross-version fix is claimed here.
+The reviewer found raw UTF8 source rejection with json-c0.18. Further tests also reproduced silent supplementary-escape replacement in0.17and0.18. For example, escapedU+AD8E3 becameU+FFFD. The corrected release uses the maintained json-c0.19 decoder in a pinned release-local library, leaving the operating system library unchanged. STRICT and UTF8 validation remain enabled. An experimental normaliser was rejected before deployment because it retained the corruption.
+
+An isolated single-scalar decoder probe checked every Unicode scalar as an escaped JSON string and every permitted scalar as raw JSON string content. This tests library string decoding, not all possible programs or a security proof:
+
+| json-c | Escaped scalars tested | Escaped mismatches | Raw scalars tested | Raw mismatches/rejections |
+|---|---:|---:|---:|---:|
+|0.17|1112064|32768|1112030|0|
+|0.18|1112064|32768|1112030|1111936|
+|0.19|1112064|0|1112030|0|
+
+Native qualification additionally passed60core/native checks including sanitizers,220raw/escaped compile-and-run cases covering110seededvalues with identical bytecode/results, a60000byte rawtext boundary and18malformedJSON rejection cases. Fourteen real installed-CLI cases passed/incoming and matched the independent reference exactly. Three-stage compiler bootstrap remains byte-identical.
+
+Every compile/run/bootstrap now tests its loaded JSON library for the known raw/supplementary failures. `rosebyte-native --check-library` exposes that check; `--version` reports the loaded version. Unqualified decoders fail before processing user programs. The release-local package was authenticated with signed Debian archive metadata, scanned through/incoming and hash-pinned; third-party licence notices are included. Qualified binary platform:Linuxx86_64/glibc>=2.38, testedUbuntu24.04. Other platforms require their own maintained compatible library/build and qualification.
+
+Previously corrupted output cannot be reconstructed without the original source. Recompile affected source with the qualified runtime; no historical tasks or artifacts are replayed automatically. Upstream reports:[json-c#875](https://github.com/json-c/json-c/issues/875),[#892](https://github.com/json-c/json-c/issues/892). Final independent retesting of this update is requested; no security certification is claimed.
+
+
+## Dependency maintenance
+
+Use the supplied release-local library and its hash/licence manifest. The owner/reviewer source package includes native/DEPENDENCIES.md with the authenticated update procedure. On another architecture, build a maintained compatible json-c library for that platform and rerun the qualification; do not reuse the suppliedx86_64ELF.

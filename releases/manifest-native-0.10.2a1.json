@@ -1,0 +1,24 @@
+{
+  "version": "native-0.10.2a1",
+  "encrypted_artifact": "rosebyte-native-fix-0.10.2a1.rbenc",
+  "ciphertext_sha256": "a84379c40f0f60c3b5dcab258b7b29171733046f1fbb5b6b703c01af8981b86e",
+  "ciphertext_bytes": 92948,
+  "plaintext_archive_sha256": "baec9b928b7512c4177b1113483202e29fa504beac121f460e3584af91de54b8",
+  "recipient_fingerprint": "2368165c6f099481d3d7b743853932a923cec40f15b2eb2fb47a0c8f8ce43607",
+  "private_core_commit": "64e5e45d7ea9f54d73fb54b110e1a5c750712a92",
+  "core_native_tests": 60,
+  "runtime_json_c": "0.19",
+  "elf_sha256": "3aa761c7f17ea3c3c9931b16ad58b36a3667ea35b488c3bcc1fb0b30f1cdc15e",
+  "package_sha256": "22a29043cacb0972466c2b978031f37a2c9fe47a3986c87bb2a6755be08844f8",
+  "single_scalar_dependency_probe": {
+    "escaped": 1112064,
+    "raw": 1112030,
+    "mismatches": 0
+  },
+  "vm_unicode_cases": 220,
+  "malformed_json_rejections": 18,
+  "installed_real_incoming_cases": 14,
+  "strict_validation_preserved": true,
+  "host_system_library_changed": false,
+  "independent_final_retest": "requested, pending"
+}

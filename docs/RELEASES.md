@@ -21,3 +21,8 @@ Enter the existing secret only at its hidden prompt, never in chat, a command ar
 For an authorised reviewer, decrypt to a new private output file using `rb-release-key decrypt SEALED NEW-ARCHIVE`, then inspect the archive before extracting it into an empty private directory. Sharing decrypted material is a separate owner decision; encryption cannot prevent an authorised recipient copying it.
 
 The [manifest](../releases/manifest-0.10.0a1.json) and [ciphertext hash](../releases/SHA256SUMS) identify the release. Check them through a trusted publisher channel: anyone with a public recipient key can encrypt different content, so encryption alone is not publisher authentication. Owner-only builds/tests are described in the native guide and Architect checklist. Public CI validates the distribution and its hashes; it does not pretend to execute an encrypted compiler.
+
+
+## Native0.10.2a1 follow-up
+
+The encrypted native-fix archive applies to a fresh copy of the original authorised source release and includes the reference equality correction, runtime Unicode guard, qualifiedjson-c0.19dependency, tests and original-before/after evidence. Native and reference package version0.10.2a1. This update is sealed to the existing owner-initialised recipient without asking for the secret again. The original owner-verified artifact remains unchanged. Current decoder qualification and platform limits are in REVIEW-FIXES.md and NATIVE.md; independent final retest remains pending. Third-partyjson-cnotices accompany the authorised release.

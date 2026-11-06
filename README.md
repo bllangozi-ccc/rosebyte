@@ -1,6 +1,6 @@
 # RoseByte
 
-Experimental bounded language and hosted translation service. **0.10.1a1 reference correction; native component0.10.0a1. Research preview; independent review in progress.**
+Experimental bounded language and hosted translation service. **0.10.2a1 research preview. Native Unicode decoder and reference equality corrections qualified; independent review continues.**
 
 - [Try the hosted translator](https://jacknrose.co.uk/rosebyte)
 - [Public guide](https://jacknrose.co.uk/guide)
