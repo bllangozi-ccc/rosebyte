@@ -113,3 +113,11 @@ assert json.loads(blob)["header"]["recipient"]==release["recipient_fingerprint"]
 release=json.loads((root/"releases/manifest-public-members-20261106.json").read_bytes());blob=(root/"releases"/release["encrypted_artifact"]).read_bytes()
 assert len(blob)==release["ciphertext_bytes"] and hashlib.sha256(blob).hexdigest()==release["ciphertext_sha256"]
 assert json.loads(blob)["header"]["recipient"]==release["recipient_fingerprint"]==m["recipient_fingerprint"]
+
+unique=root/'examples/unique-positive'
+for name,want in json.loads((unique/'manifest.json').read_bytes())['files'].items():
+ assert '/' not in name and name not in {'.','..'}
+ assert hashlib.sha256((unique/name).read_bytes()).hexdigest()==want
+r=json.loads((unique/'RESULT.json').read_bytes())
+assert r['compressed_Python_still_smaller'] and not r['dictionary_or_opcode_changes']
+assert len(json.loads((unique/'cases.json').read_bytes()))==1007
