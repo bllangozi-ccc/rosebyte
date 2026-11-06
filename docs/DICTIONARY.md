@@ -35,3 +35,7 @@ of good intentions. It contains no account credentials, project data or vault
 contents. Project-specific compression dictionaries can reveal vocabulary and
 remain private unless their owner deliberately publishes them. No private
 compression dictionary was used to produce these public files.
+
+## Primary symbol-and-number source
+
+See [RBS1 syntax and rules](SHORTHAND.md), `spec/shorthand-dictionary.json`, `spec/dictionary.rbs` and `spec/shorthand-manifest.json`. Primitive IDs retain the codebook meanings above. The older RBL1 JSON artifacts remain compatible and unchanged. RBS1 provides the compact authored form; quoted strings remain literal data.

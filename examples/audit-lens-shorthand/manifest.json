@@ -1,0 +1,17 @@
+{
+  "application": "RoseByte Audit Lens shorthand",
+  "version": "1.1.0-preview",
+  "syntax": "RBS1-20261106.1",
+  "files": {
+    "audit-lens.rblb": "8d387d50af4f218d0080cc3497b7fa49f9cf3fcfc431fb5dd96e760fc3053daa",
+    "README.md": "c1a1ecf2c2cb27a83e6353ef8ebaed1a94231cd69e2e08e5810be5f9c368f999",
+    "delivery.json": "ea01acd62d4462b25ed0645f2fae4b82307099e9bbccac8bb0ff854327bacdff",
+    "run.py": "389cf0654a714edee7774b89c480f156db8fc83433c9116d0b3f1f3b1d881a59",
+    "benchmark.py": "a1d8e95675a724523ba71faf81644ca7c0fa9483c271de46b3fb1342bf1ef2e0",
+    "measurements.json": "536ebebe8a7ed7a923a459125d1de63cbab82c1ffabb3bac3189593d332beb47",
+    "audit-lens.rbs": "c497ead73636aab8170330539e3803e4ac902bed171cc0024ce7201936f08568",
+    "test_example.py": "22a59ddf9ab834a597d85a3229d0f6eb82c54d92538b9523678e54eb6aeeb0ad"
+  },
+  "original_example": "../audit-lens remains intact",
+  "security": "Same bounded VM and adapter; source grammar change is not a new safety certificate"
+}

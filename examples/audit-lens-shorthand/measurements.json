@@ -1,0 +1,1576 @@
+{
+  "schema": "rosebyte-shorthand-benchmark-1",
+  "environment": {
+    "python": "3.12.3",
+    "zlib": "1.3",
+    "brotli": "1.2.1",
+    "zstd": "0.25.0",
+    "cbor2": "6.2.0.post2"
+  },
+  "fixtures": [
+    {
+      "fixture": "audit-lens",
+      "representations": {
+        "RoseByte-RBS1": {
+          "raw_bytes": 2259,
+          "sha256": "c497ead73636aab8170330539e3803e4ac902bed171cc0024ce7201936f08568",
+          "best": "brotli11",
+          "best_bytes": 849,
+          "codecs": {
+            "raw": {
+              "bytes": 2259,
+              "encode_ms_single_observation": 0.000501
+            },
+            "zlib9": {
+              "bytes": 1008,
+              "encode_ms_single_observation": 0.163164
+            },
+            "gzip9": {
+              "bytes": 1020,
+              "encode_ms_single_observation": 0.110966
+            },
+            "bz2-9": {
+              "bytes": 1108,
+              "encode_ms_single_observation": 0.372087
+            },
+            "lzma6": {
+              "bytes": 1084,
+              "encode_ms_single_observation": 11.349467
+            },
+            "brotli11": {
+              "bytes": 849,
+              "encode_ms_single_observation": 3.026473
+            },
+            "zstd19": {
+              "bytes": 1042,
+              "encode_ms_single_observation": 0.374961
+            }
+          }
+        },
+        "JSON-numeric-slots": {
+          "raw_bytes": 6297,
+          "sha256": "4b9804e87606763ecd32c155d312752e574544f51b9826fd14582d6c2a0ce92d",
+          "best": "brotli11",
+          "best_bytes": 1110,
+          "codecs": {
+            "raw": {
+              "bytes": 6297,
+              "encode_ms_single_observation": 0.000561
+            },
+            "zlib9": {
+              "bytes": 1321,
+              "encode_ms_single_observation": 0.09959
+            },
+            "gzip9": {
+              "bytes": 1333,
+              "encode_ms_single_observation": 0.089324
+            },
+            "bz2-9": {
+              "bytes": 1431,
+              "encode_ms_single_observation": 0.69371
+            },
+            "lzma6": {
+              "bytes": 1364,
+              "encode_ms_single_observation": 9.383172
+            },
+            "brotli11": {
+              "bytes": 1110,
+              "encode_ms_single_observation": 6.748386
+            },
+            "zstd19": {
+              "bytes": 1312,
+              "encode_ms_single_observation": 1.798133
+            }
+          }
+        },
+        "CBOR-numeric-slots": {
+          "raw_bytes": 4504,
+          "sha256": "a108b487c1a878ebb7e2008bc3295eb29c68442009961668df0c2a0d5fd95297",
+          "best": "brotli11",
+          "best_bytes": 1055,
+          "codecs": {
+            "raw": {
+              "bytes": 4504,
+              "encode_ms_single_observation": 0.000601
+            },
+            "zlib9": {
+              "bytes": 1269,
+              "encode_ms_single_observation": 0.080921
+            },
+            "gzip9": {
+              "bytes": 1281,
+              "encode_ms_single_observation": 0.07994
+            },
+            "bz2-9": {
+              "bytes": 1389,
+              "encode_ms_single_observation": 0.524597
+            },
+            "lzma6": {
+              "bytes": 1304,
+              "encode_ms_single_observation": 1.524262
+            },
+            "brotli11": {
+              "bytes": 1055,
+              "encode_ms_single_observation": 4.702322
+            },
+            "zstd19": {
+              "bytes": 1268,
+              "encode_ms_single_observation": 0.98138
+            }
+          }
+        },
+        "RBLB1-numeric-slots": {
+          "raw_bytes": 3112,
+          "sha256": "8d387d50af4f218d0080cc3497b7fa49f9cf3fcfc431fb5dd96e760fc3053daa",
+          "best": "brotli11",
+          "best_bytes": 912,
+          "codecs": {
+            "raw": {
+              "bytes": 3112,
+              "encode_ms_single_observation": 0.000672
+            },
+            "zlib9": {
+              "bytes": 1125,
+              "encode_ms_single_observation": 0.091266
+            },
+            "gzip9": {
+              "bytes": 1137,
+              "encode_ms_single_observation": 0.082292
+            },
+            "bz2-9": {
+              "bytes": 1190,
+              "encode_ms_single_observation": 0.384436
+            },
+            "lzma6": {
+              "bytes": 1160,
+              "encode_ms_single_observation": 1.396251
+            },
+            "brotli11": {
+              "bytes": 912,
+              "encode_ms_single_observation": 3.420803
+            },
+            "zstd19": {
+              "bytes": 1137,
+              "encode_ms_single_observation": 0.52129
+            }
+          }
+        },
+        "Python-equivalent": {
+          "raw_bytes": 2428,
+          "sha256": "1fdde72002877d9efb8bb0b2d52656c22f5fb101c5582d7b202cff181f656886",
+          "best": "brotli11",
+          "best_bytes": 942,
+          "codecs": {
+            "raw": {
+              "bytes": 2428,
+              "encode_ms_single_observation": 0.000741
+            },
+            "zlib9": {
+              "bytes": 1173,
+              "encode_ms_single_observation": 0.058508
+            },
+            "gzip9": {
+              "bytes": 1185,
+              "encode_ms_single_observation": 0.051698
+            },
+            "bz2-9": {
+              "bytes": 1308,
+              "encode_ms_single_observation": 0.316124
+            },
+            "lzma6": {
+              "bytes": 1280,
+              "encode_ms_single_observation": 1.257693
+            },
+            "brotli11": {
+              "bytes": 942,
+              "encode_ms_single_observation": 3.103398
+            },
+            "zstd19": {
+              "bytes": 1195,
+              "encode_ms_single_observation": 0.299858
+            }
+          }
+        }
+      },
+      "RoseByte_beats_best_tested_alternative": true,
+      "RoseByte_vs_best_alternative_percent": 6.91
+    },
+    {
+      "fixture": "release-check",
+      "representations": {
+        "RoseByte-RBS1": {
+          "raw_bytes": 157,
+          "sha256": "28030bd5fba7a54578172de457f2d9f4d4b32135016dd855cb347aa8aed810e6",
+          "best": "brotli11",
+          "best_bytes": 131,
+          "codecs": {
+            "raw": {
+              "bytes": 157,
+              "encode_ms_single_observation": 0.000741
+            },
+            "zlib9": {
+              "bytes": 135,
+              "encode_ms_single_observation": 0.023395
+            },
+            "gzip9": {
+              "bytes": 147,
+              "encode_ms_single_observation": 0.014553
+            },
+            "bz2-9": {
+              "bytes": 155,
+              "encode_ms_single_observation": 0.056846
+            },
+            "lzma6": {
+              "bytes": 196,
+              "encode_ms_single_observation": 0.948481
+            },
+            "brotli11": {
+              "bytes": 131,
+              "encode_ms_single_observation": 0.560439
+            },
+            "zstd19": {
+              "bytes": 137,
+              "encode_ms_single_observation": 0.043586
+            }
+          }
+        },
+        "JSON-numeric-slots": {
+          "raw_bytes": 821,
+          "sha256": "7c1a8cb6eaf55a4094a4a5f3ef64454e6c8a42c42df4e0c7608060f50cab671c",
+          "best": "brotli11",
+          "best_bytes": 257,
+          "codecs": {
+            "raw": {
+              "bytes": 821,
+              "encode_ms_single_observation": 0.000762
+            },
+            "zlib9": {
+              "bytes": 281,
+              "encode_ms_single_observation": 0.036495
+            },
+            "gzip9": {
+              "bytes": 293,
+              "encode_ms_single_observation": 0.050666
+            },
+            "bz2-9": {
+              "bytes": 313,
+              "encode_ms_single_observation": 0.106259
+            },
+            "lzma6": {
+              "bytes": 352,
+              "encode_ms_single_observation": 0.980859
+            },
+            "brotli11": {
+              "bytes": 257,
+              "encode_ms_single_observation": 1.171295
+            },
+            "zstd19": {
+              "bytes": 286,
+              "encode_ms_single_observation": 0.162393
+            }
+          }
+        },
+        "CBOR-numeric-slots": {
+          "raw_bytes": 524,
+          "sha256": "a5d06727f6d19eb56dae34a442dd8f421efa76f6b10dfc4903f144530c8d0de0",
+          "best": "brotli11",
+          "best_bytes": 219,
+          "codecs": {
+            "raw": {
+              "bytes": 524,
+              "encode_ms_single_observation": 0.000441
+            },
+            "zlib9": {
+              "bytes": 243,
+              "encode_ms_single_observation": 0.022584
+            },
+            "gzip9": {
+              "bytes": 255,
+              "encode_ms_single_observation": 0.01988
+            },
+            "bz2-9": {
+              "bytes": 285,
+              "encode_ms_single_observation": 0.076956
+            },
+            "lzma6": {
+              "bytes": 308,
+              "encode_ms_single_observation": 0.873777
+            },
+            "brotli11": {
+              "bytes": 219,
+              "encode_ms_single_observation": 0.737294
+            },
+            "zstd19": {
+              "bytes": 253,
+              "encode_ms_single_observation": 0.0874
+            }
+          }
+        },
+        "RBLB1-numeric-slots": {
+          "raw_bytes": 308,
+          "sha256": "8150fbedeaf726b6cfcce10bd949c2581c5689275378aee9940fa4fb078eba82",
+          "best": "brotli11",
+          "best_bytes": 151,
+          "codecs": {
+            "raw": {
+              "bytes": 308,
+              "encode_ms_single_observation": 0.000551
+            },
+            "zlib9": {
+              "bytes": 162,
+              "encode_ms_single_observation": 0.021242
+            },
+            "gzip9": {
+              "bytes": 174,
+              "encode_ms_single_observation": 0.018487
+            },
+            "bz2-9": {
+              "bytes": 187,
+              "encode_ms_single_observation": 0.054129
+            },
+            "lzma6": {
+              "bytes": 220,
+              "encode_ms_single_observation": 0.816933
+            },
+            "brotli11": {
+              "bytes": 151,
+              "encode_ms_single_observation": 0.575101
+            },
+            "zstd19": {
+              "bytes": 171,
+              "encode_ms_single_observation": 0.063625
+            }
+          }
+        }
+      },
+      "RoseByte_beats_best_tested_alternative": true,
+      "RoseByte_vs_best_alternative_percent": 13.25
+    },
+    {
+      "fixture": "dictionary",
+      "representations": {
+        "RoseByte-RBS1": {
+          "raw_bytes": 1514,
+          "sha256": "07249c8fbb2a3dfab638de3a6003c7e1a81ecbdc4497aaf287312eaabbc18ba5",
+          "best": "brotli11",
+          "best_bytes": 369,
+          "codecs": {
+            "raw": {
+              "bytes": 1514,
+              "encode_ms_single_observation": 0.000821
+            },
+            "zlib9": {
+              "bytes": 419,
+              "encode_ms_single_observation": 0.038097
+            },
+            "gzip9": {
+              "bytes": 431,
+              "encode_ms_single_observation": 0.028132
+            },
+            "bz2-9": {
+              "bytes": 484,
+              "encode_ms_single_observation": 0.16017
+            },
+            "lzma6": {
+              "bytes": 496,
+              "encode_ms_single_observation": 1.300808
+            },
+            "brotli11": {
+              "bytes": 369,
+              "encode_ms_single_observation": 1.652194
+            },
+            "zstd19": {
+              "bytes": 430,
+              "encode_ms_single_observation": 0.25361
+            }
+          }
+        },
+        "JSON-numeric-slots": {
+          "raw_bytes": 1782,
+          "sha256": "3ba9f59def6d37ae1881b4483cce4ba0a29f1a402adb08c5580f38e848649d63",
+          "best": "brotli11",
+          "best_bytes": 407,
+          "codecs": {
+            "raw": {
+              "bytes": 1782,
+              "encode_ms_single_observation": 0.000621
+            },
+            "zlib9": {
+              "bytes": 488,
+              "encode_ms_single_observation": 0.039099
+            },
+            "gzip9": {
+              "bytes": 500,
+              "encode_ms_single_observation": 0.034242
+            },
+            "bz2-9": {
+              "bytes": 529,
+              "encode_ms_single_observation": 0.188223
+            },
+            "lzma6": {
+              "bytes": 564,
+              "encode_ms_single_observation": 1.172447
+            },
+            "brotli11": {
+              "bytes": 407,
+              "encode_ms_single_observation": 1.965934
+            },
+            "zstd19": {
+              "bytes": 505,
+              "encode_ms_single_observation": 0.371657
+            }
+          }
+        },
+        "CBOR-numeric-slots": {
+          "raw_bytes": 1395,
+          "sha256": "a18cf2778d338304be76504d9e3fd2a4582db60c8d8049f889a2ec652e628cc2",
+          "best": "brotli11",
+          "best_bytes": 431,
+          "codecs": {
+            "raw": {
+              "bytes": 1395,
+              "encode_ms_single_observation": 0.000721
+            },
+            "zlib9": {
+              "bytes": 471,
+              "encode_ms_single_observation": 0.035282
+            },
+            "gzip9": {
+              "bytes": 483,
+              "encode_ms_single_observation": 0.030395
+            },
+            "bz2-9": {
+              "bytes": 568,
+              "encode_ms_single_observation": 0.172548
+            },
+            "lzma6": {
+              "bytes": 540,
+              "encode_ms_single_observation": 1.105426
+            },
+            "brotli11": {
+              "bytes": 431,
+              "encode_ms_single_observation": 1.468459
+            },
+            "zstd19": {
+              "bytes": 489,
+              "encode_ms_single_observation": 0.18107
+            }
+          }
+        },
+        "RBLB1-numeric-slots": {
+          "raw_bytes": 2528,
+          "sha256": "4303429cd688e1c49b4f859171aee8e731f2bf25f278a900c431353ba9fadfbe",
+          "best": "brotli11",
+          "best_bytes": 431,
+          "codecs": {
+            "raw": {
+              "bytes": 2528,
+              "encode_ms_single_observation": 0.000611
+            },
+            "zlib9": {
+              "bytes": 540,
+              "encode_ms_single_observation": 0.078698
+            },
+            "gzip9": {
+              "bytes": 552,
+              "encode_ms_single_observation": 0.06664
+            },
+            "bz2-9": {
+              "bytes": 591,
+              "encode_ms_single_observation": 0.224796
+            },
+            "lzma6": {
+              "bytes": 560,
+              "encode_ms_single_observation": 1.259806
+            },
+            "brotli11": {
+              "bytes": 431,
+              "encode_ms_single_observation": 2.495087
+            },
+            "zstd19": {
+              "bytes": 522,
+              "encode_ms_single_observation": 0.542944
+            }
+          }
+        }
+      },
+      "RoseByte_beats_best_tested_alternative": true,
+      "RoseByte_vs_best_alternative_percent": 9.34
+    },
+    {
+      "fixture": "compiler",
+      "representations": {
+        "RoseByte-RBS1": {
+          "raw_bytes": 1244,
+          "sha256": "d4adee46eec4854ebdd18c0aa9f0985b6528df104603e043ae83ceec1b6b56d9",
+          "best": "brotli11",
+          "best_bytes": 532,
+          "codecs": {
+            "raw": {
+              "bytes": 1244,
+              "encode_ms_single_observation": 0.001092
+            },
+            "zlib9": {
+              "bytes": 593,
+              "encode_ms_single_observation": 0.049073
+            },
+            "gzip9": {
+              "bytes": 605,
+              "encode_ms_single_observation": 0.03353
+            },
+            "bz2-9": {
+              "bytes": 620,
+              "encode_ms_single_observation": 0.172339
+            },
+            "lzma6": {
+              "bytes": 656,
+              "encode_ms_single_observation": 1.397353
+            },
+            "brotli11": {
+              "bytes": 532,
+              "encode_ms_single_observation": 1.868859
+            },
+            "zstd19": {
+              "bytes": 604,
+              "encode_ms_single_observation": 0.184786
+            }
+          }
+        },
+        "JSON-numeric-slots": {
+          "raw_bytes": 6040,
+          "sha256": "4b8c774d58d9fc0e0fd9a08a9510f8991139658757657d5720ba96388f67f2b0",
+          "best": "brotli11",
+          "best_bytes": 777,
+          "codecs": {
+            "raw": {
+              "bytes": 6040,
+              "encode_ms_single_observation": 0.000592
+            },
+            "zlib9": {
+              "bytes": 885,
+              "encode_ms_single_observation": 0.110216
+            },
+            "gzip9": {
+              "bytes": 897,
+              "encode_ms_single_observation": 0.081212
+            },
+            "bz2-9": {
+              "bytes": 830,
+              "encode_ms_single_observation": 0.585947
+            },
+            "lzma6": {
+              "bytes": 916,
+              "encode_ms_single_observation": 1.988266
+            },
+            "brotli11": {
+              "bytes": 777,
+              "encode_ms_single_observation": 6.723749
+            },
+            "zstd19": {
+              "bytes": 863,
+              "encode_ms_single_observation": 2.024341
+            }
+          }
+        },
+        "CBOR-numeric-slots": {
+          "raw_bytes": 3939,
+          "sha256": "3ea3ad9965339c961a99b934dbe9a9272443f538d4263e7fffde3d32b6dbaedf",
+          "best": "brotli11",
+          "best_bytes": 717,
+          "codecs": {
+            "raw": {
+              "bytes": 3939,
+              "encode_ms_single_observation": 0.000581
+            },
+            "zlib9": {
+              "bytes": 798,
+              "encode_ms_single_observation": 0.069424
+            },
+            "gzip9": {
+              "bytes": 810,
+              "encode_ms_single_observation": 0.059138
+            },
+            "bz2-9": {
+              "bytes": 814,
+              "encode_ms_single_observation": 0.416824
+            },
+            "lzma6": {
+              "bytes": 820,
+              "encode_ms_single_observation": 1.652504
+            },
+            "brotli11": {
+              "bytes": 717,
+              "encode_ms_single_observation": 3.790738
+            },
+            "zstd19": {
+              "bytes": 782,
+              "encode_ms_single_observation": 1.063713
+            }
+          }
+        },
+        "RBLB1-numeric-slots": {
+          "raw_bytes": 2262,
+          "sha256": "c8243a9f47da37ea48ddb52d7a5feb8157f39255a504a74433cb7575a912dfce",
+          "best": "brotli11",
+          "best_bytes": 608,
+          "codecs": {
+            "raw": {
+              "bytes": 2262,
+              "encode_ms_single_observation": 0.000491
+            },
+            "zlib9": {
+              "bytes": 693,
+              "encode_ms_single_observation": 0.077987
+            },
+            "gzip9": {
+              "bytes": 705,
+              "encode_ms_single_observation": 0.076555
+            },
+            "bz2-9": {
+              "bytes": 669,
+              "encode_ms_single_observation": 0.268813
+            },
+            "lzma6": {
+              "bytes": 720,
+              "encode_ms_single_observation": 1.321198
+            },
+            "brotli11": {
+              "bytes": 608,
+              "encode_ms_single_observation": 2.408015
+            },
+            "zstd19": {
+              "bytes": 687,
+              "encode_ms_single_observation": 0.424987
+            }
+          }
+        }
+      },
+      "RoseByte_beats_best_tested_alternative": true,
+      "RoseByte_vs_best_alternative_percent": 12.5
+    },
+    {
+      "fixture": "tiny-sum",
+      "representations": {
+        "RoseByte-RBS1": {
+          "raw_bytes": 17,
+          "sha256": "f903d39aa346e995ea7f90bcdc3207ab41f4c7b0fd9f62dcb49b94f0b64fe07f",
+          "best": "raw",
+          "best_bytes": 17,
+          "codecs": {
+            "raw": {
+              "bytes": 17,
+              "encode_ms_single_observation": 0.000691
+            },
+            "zlib9": {
+              "bytes": 25,
+              "encode_ms_single_observation": 0.015033
+            },
+            "gzip9": {
+              "bytes": 37,
+              "encode_ms_single_observation": 0.009615
+            },
+            "bz2-9": {
+              "bytes": 55,
+              "encode_ms_single_observation": 0.014843
+            },
+            "lzma6": {
+              "bytes": 76,
+              "encode_ms_single_observation": 0.976091
+            },
+            "brotli11": {
+              "bytes": 21,
+              "encode_ms_single_observation": 0.293099
+            },
+            "zstd19": {
+              "bytes": 26,
+              "encode_ms_single_observation": 0.021493
+            }
+          }
+        },
+        "JSON-numeric-slots": {
+          "raw_bytes": 117,
+          "sha256": "252e1da25dfd1783b8df7f16e1e84c3bb07f92d48724246c59c95b474f609af2",
+          "best": "zstd19",
+          "best_bytes": 101,
+          "codecs": {
+            "raw": {
+              "bytes": 117,
+              "encode_ms_single_observation": 0.000401
+            },
+            "zlib9": {
+              "bytes": 102,
+              "encode_ms_single_observation": 0.017075
+            },
+            "gzip9": {
+              "bytes": 114,
+              "encode_ms_single_observation": 0.012659
+            },
+            "bz2-9": {
+              "bytes": 122,
+              "encode_ms_single_observation": 0.029985
+            },
+            "lzma6": {
+              "bytes": 160,
+              "encode_ms_single_observation": 0.884083
+            },
+            "brotli11": {
+              "bytes": 102,
+              "encode_ms_single_observation": 0.762752
+            },
+            "zstd19": {
+              "bytes": 101,
+              "encode_ms_single_observation": 0.049755
+            }
+          }
+        },
+        "CBOR-numeric-slots": {
+          "raw_bytes": 81,
+          "sha256": "b84098b60d67d79ce24c295d2a840e774481b42f18893288e5c9ba44fde7f171",
+          "best": "brotli11",
+          "best_bytes": 68,
+          "codecs": {
+            "raw": {
+              "bytes": 81,
+              "encode_ms_single_observation": 0.000831
+            },
+            "zlib9": {
+              "bytes": 86,
+              "encode_ms_single_observation": 0.019969
+            },
+            "gzip9": {
+              "bytes": 98,
+              "encode_ms_single_observation": 0.01326
+            },
+            "bz2-9": {
+              "bytes": 118,
+              "encode_ms_single_observation": 0.049433
+            },
+            "lzma6": {
+              "bytes": 140,
+              "encode_ms_single_observation": 0.877144
+            },
+            "brotli11": {
+              "bytes": 68,
+              "encode_ms_single_observation": 0.368211
+            },
+            "zstd19": {
+              "bytes": 82,
+              "encode_ms_single_observation": 0.03323
+            }
+          }
+        },
+        "RBLB1-numeric-slots": {
+          "raw_bytes": 43,
+          "sha256": "259edf08a4e34bde5c716fbd2437a81c0cc14f9a2222da0e2edb9fa7de8f9ed5",
+          "best": "zlib9",
+          "best_bytes": 34,
+          "codecs": {
+            "raw": {
+              "bytes": 43,
+              "encode_ms_single_observation": 0.00043
+            },
+            "zlib9": {
+              "bytes": 34,
+              "encode_ms_single_observation": 0.012178
+            },
+            "gzip9": {
+              "bytes": 46,
+              "encode_ms_single_observation": 0.018557
+            },
+            "bz2-9": {
+              "bytes": 67,
+              "encode_ms_single_observation": 0.018287
+            },
+            "lzma6": {
+              "bytes": 88,
+              "encode_ms_single_observation": 0.906789
+            },
+            "brotli11": {
+              "bytes": 41,
+              "encode_ms_single_observation": 0.326078
+            },
+            "zstd19": {
+              "bytes": 42,
+              "encode_ms_single_observation": 0.031587
+            }
+          }
+        }
+      },
+      "RoseByte_beats_best_tested_alternative": true,
+      "RoseByte_vs_best_alternative_percent": 50.0
+    },
+    {
+      "fixture": "unicode",
+      "representations": {
+        "RoseByte-RBS1": {
+          "raw_bytes": 29,
+          "sha256": "9acdaa9f78a08d17d715758a4cb2737aa3dccfd40ff5781e5202ab8ff0c50eae",
+          "best": "raw",
+          "best_bytes": 29,
+          "codecs": {
+            "raw": {
+              "bytes": 29,
+              "encode_ms_single_observation": 0.000511
+            },
+            "zlib9": {
+              "bytes": 38,
+              "encode_ms_single_observation": 0.0132
+            },
+            "gzip9": {
+              "bytes": 50,
+              "encode_ms_single_observation": 0.008272
+            },
+            "bz2-9": {
+              "bytes": 84,
+              "encode_ms_single_observation": 0.020911
+            },
+            "lzma6": {
+              "bytes": 88,
+              "encode_ms_single_observation": 0.96169
+            },
+            "brotli11": {
+              "bytes": 33,
+              "encode_ms_single_observation": 0.410424
+            },
+            "zstd19": {
+              "bytes": 38,
+              "encode_ms_single_observation": 0.023325
+            }
+          }
+        },
+        "JSON-numeric-slots": {
+          "raw_bytes": 110,
+          "sha256": "7005e55f30797cb4d9902d7360939244838fa645891d3f37f1d64a9abf92689a",
+          "best": "brotli11",
+          "best_bytes": 97,
+          "codecs": {
+            "raw": {
+              "bytes": 110,
+              "encode_ms_single_observation": 0.00034
+            },
+            "zlib9": {
+              "bytes": 101,
+              "encode_ms_single_observation": 0.018478
+            },
+            "gzip9": {
+              "bytes": 113,
+              "encode_ms_single_observation": 0.01281
+            },
+            "bz2-9": {
+              "bytes": 142,
+              "encode_ms_single_observation": 0.035803
+            },
+            "lzma6": {
+              "bytes": 160,
+              "encode_ms_single_observation": 0.974059
+            },
+            "brotli11": {
+              "bytes": 97,
+              "encode_ms_single_observation": 0.538176
+            },
+            "zstd19": {
+              "bytes": 114,
+              "encode_ms_single_observation": 0.049614
+            }
+          }
+        },
+        "CBOR-numeric-slots": {
+          "raw_bytes": 82,
+          "sha256": "bc81da02aa9d3861552c8f549a76029c75a9bc4498d65c2216e73908fbed032d",
+          "best": "brotli11",
+          "best_bytes": 72,
+          "codecs": {
+            "raw": {
+              "bytes": 82,
+              "encode_ms_single_observation": 0.000471
+            },
+            "zlib9": {
+              "bytes": 89,
+              "encode_ms_single_observation": 0.015613
+            },
+            "gzip9": {
+              "bytes": 101,
+              "encode_ms_single_observation": 0.01393
+            },
+            "bz2-9": {
+              "bytes": 129,
+              "encode_ms_single_observation": 0.028663
+            },
+            "lzma6": {
+              "bytes": 140,
+              "encode_ms_single_observation": 0.966247
+            },
+            "brotli11": {
+              "bytes": 72,
+              "encode_ms_single_observation": 0.351737
+            },
+            "zstd19": {
+              "bytes": 91,
+              "encode_ms_single_observation": 0.033671
+            }
+          }
+        },
+        "RBLB1-numeric-slots": {
+          "raw_bytes": 43,
+          "sha256": "8595fcb67ccf5b7c2769713bae5654e0f1244809343cbbbc3a562870a7e73506",
+          "best": "raw",
+          "best_bytes": 43,
+          "codecs": {
+            "raw": {
+              "bytes": 43,
+              "encode_ms_single_observation": 0.00039
+            },
+            "zlib9": {
+              "bytes": 46,
+              "encode_ms_single_observation": 0.01294
+            },
+            "gzip9": {
+              "bytes": 58,
+              "encode_ms_single_observation": 0.010095
+            },
+            "bz2-9": {
+              "bytes": 95,
+              "encode_ms_single_observation": 0.022463
+            },
+            "lzma6": {
+              "bytes": 100,
+              "encode_ms_single_observation": 0.915861
+            },
+            "brotli11": {
+              "bytes": 47,
+              "encode_ms_single_observation": 0.450666
+            },
+            "zstd19": {
+              "bytes": 52,
+              "encode_ms_single_observation": 0.038818
+            }
+          }
+        }
+      },
+      "RoseByte_beats_best_tested_alternative": true,
+      "RoseByte_vs_best_alternative_percent": 32.56
+    },
+    {
+      "fixture": "integers",
+      "representations": {
+        "RoseByte-RBS1": {
+          "raw_bytes": 21,
+          "sha256": "ce7cbc987dd4472deaad2175c6f818fda66f344271342c9d8413f51eba355a1a",
+          "best": "raw",
+          "best_bytes": 21,
+          "codecs": {
+            "raw": {
+              "bytes": 21,
+              "encode_ms_single_observation": 0.000781
+            },
+            "zlib9": {
+              "bytes": 29,
+              "encode_ms_single_observation": 0.014201
+            },
+            "gzip9": {
+              "bytes": 41,
+              "encode_ms_single_observation": 0.007562
+            },
+            "bz2-9": {
+              "bytes": 59,
+              "encode_ms_single_observation": 0.031928
+            },
+            "lzma6": {
+              "bytes": 80,
+              "encode_ms_single_observation": 1.044555
+            },
+            "brotli11": {
+              "bytes": 25,
+              "encode_ms_single_observation": 0.324997
+            },
+            "zstd19": {
+              "bytes": 30,
+              "encode_ms_single_observation": 0.032408
+            }
+          }
+        },
+        "JSON-numeric-slots": {
+          "raw_bytes": 1007,
+          "sha256": "9100d3e72c40604463f41e39a6e5df58363eea91fde89ed608cc6cb80420d3b2",
+          "best": "lzma6",
+          "best_bytes": 364,
+          "codecs": {
+            "raw": {
+              "bytes": 1007,
+              "encode_ms_single_observation": 0.000461
+            },
+            "zlib9": {
+              "bytes": 545,
+              "encode_ms_single_observation": 0.030234
+            },
+            "gzip9": {
+              "bytes": 557,
+              "encode_ms_single_observation": 0.02651
+            },
+            "bz2-9": {
+              "bytes": 416,
+              "encode_ms_single_observation": 0.102704
+            },
+            "lzma6": {
+              "bytes": 364,
+              "encode_ms_single_observation": 0.955291
+            },
+            "brotli11": {
+              "bytes": 411,
+              "encode_ms_single_observation": 1.189382
+            },
+            "zstd19": {
+              "bytes": 390,
+              "encode_ms_single_observation": 0.12686
+            }
+          }
+        },
+        "CBOR-numeric-slots": {
+          "raw_bytes": 556,
+          "sha256": "9ae0079281a3b9f10594118092241c4e2d0e4df02b38770b99d86486ecd1d62f",
+          "best": "brotli11",
+          "best_bytes": 347,
+          "codecs": {
+            "raw": {
+              "bytes": 556,
+              "encode_ms_single_observation": 0.000591
+            },
+            "zlib9": {
+              "bytes": 455,
+              "encode_ms_single_observation": 0.041553
+            },
+            "gzip9": {
+              "bytes": 467,
+              "encode_ms_single_observation": 0.039259
+            },
+            "bz2-9": {
+              "bytes": 547,
+              "encode_ms_single_observation": 0.204676
+            },
+            "lzma6": {
+              "bytes": 504,
+              "encode_ms_single_observation": 0.917555
+            },
+            "brotli11": {
+              "bytes": 347,
+              "encode_ms_single_observation": 0.939317
+            },
+            "zstd19": {
+              "bytes": 425,
+              "encode_ms_single_observation": 0.053711
+            }
+          }
+        },
+        "RBLB1-numeric-slots": {
+          "raw_bytes": 2329,
+          "sha256": "4c0fd5a23bf180c6b7445017537d8c817ecfb9709687f9da48b9d9f3cc54cdf4",
+          "best": "zstd19",
+          "best_bytes": 315,
+          "codecs": {
+            "raw": {
+              "bytes": 2329,
+              "encode_ms_single_observation": 0.000501
+            },
+            "zlib9": {
+              "bytes": 499,
+              "encode_ms_single_observation": 0.410995
+            },
+            "gzip9": {
+              "bytes": 511,
+              "encode_ms_single_observation": 0.411737
+            },
+            "bz2-9": {
+              "bytes": 510,
+              "encode_ms_single_observation": 0.240359
+            },
+            "lzma6": {
+              "bytes": 368,
+              "encode_ms_single_observation": 1.140658
+            },
+            "brotli11": {
+              "bytes": 336,
+              "encode_ms_single_observation": 1.806696
+            },
+            "zstd19": {
+              "bytes": 315,
+              "encode_ms_single_observation": 0.883572
+            }
+          }
+        }
+      },
+      "RoseByte_beats_best_tested_alternative": true,
+      "RoseByte_vs_best_alternative_percent": 93.33
+    },
+    {
+      "fixture": "squares",
+      "representations": {
+        "RoseByte-RBS1": {
+          "raw_bytes": 21,
+          "sha256": "6cc333b12add6adcb5c558dbed6857908c5cb5ec26f9e667e6960dbe0f7c574a",
+          "best": "raw",
+          "best_bytes": 21,
+          "codecs": {
+            "raw": {
+              "bytes": 21,
+              "encode_ms_single_observation": 0.000901
+            },
+            "zlib9": {
+              "bytes": 29,
+              "encode_ms_single_observation": 0.013209
+            },
+            "gzip9": {
+              "bytes": 41,
+              "encode_ms_single_observation": 0.007822
+            },
+            "bz2-9": {
+              "bytes": 59,
+              "encode_ms_single_observation": 0.032149
+            },
+            "lzma6": {
+              "bytes": 80,
+              "encode_ms_single_observation": 0.869452
+            },
+            "brotli11": {
+              "bytes": 25,
+              "encode_ms_single_observation": 0.305998
+            },
+            "zstd19": {
+              "bytes": 30,
+              "encode_ms_single_observation": 0.019839
+            }
+          }
+        },
+        "JSON-numeric-slots": {
+          "raw_bytes": 1483,
+          "sha256": "48d971687ec71a40691504ff0a6efd8e98c55da6234deba3323c93a6d754bde4",
+          "best": "brotli11",
+          "best_bytes": 574,
+          "codecs": {
+            "raw": {
+              "bytes": 1483,
+              "encode_ms_single_observation": 0.000431
+            },
+            "zlib9": {
+              "bytes": 760,
+              "encode_ms_single_observation": 0.043465
+            },
+            "gzip9": {
+              "bytes": 772,
+              "encode_ms_single_observation": 0.038036
+            },
+            "bz2-9": {
+              "bytes": 723,
+              "encode_ms_single_observation": 0.180001
+            },
+            "lzma6": {
+              "bytes": 720,
+              "encode_ms_single_observation": 1.070423
+            },
+            "brotli11": {
+              "bytes": 574,
+              "encode_ms_single_observation": 1.892924
+            },
+            "zstd19": {
+              "bytes": 684,
+              "encode_ms_single_observation": 0.185048
+            }
+          }
+        },
+        "CBOR-numeric-slots": {
+          "raw_bytes": 815,
+          "sha256": "b299b6411799139d84a40547d00491b9ff14531dbeb282df830e47108abf4164",
+          "best": "brotli11",
+          "best_bytes": 618,
+          "codecs": {
+            "raw": {
+              "bytes": 815,
+              "encode_ms_single_observation": 0.00037
+            },
+            "zlib9": {
+              "bytes": 692,
+              "encode_ms_single_observation": 0.042603
+            },
+            "gzip9": {
+              "bytes": 704,
+              "encode_ms_single_observation": 0.038908
+            },
+            "bz2-9": {
+              "bytes": 835,
+              "encode_ms_single_observation": 0.251487
+            },
+            "lzma6": {
+              "bytes": 660,
+              "encode_ms_single_observation": 0.930454
+            },
+            "brotli11": {
+              "bytes": 618,
+              "encode_ms_single_observation": 1.513045
+            },
+            "zstd19": {
+              "bytes": 681,
+              "encode_ms_single_observation": 0.066019
+            }
+          }
+        },
+        "RBLB1-numeric-slots": {
+          "raw_bytes": 2329,
+          "sha256": "7d60cd3c8ee0faa8383d0288b12630f38eeaa8e2f2770630713389db181041b7",
+          "best": "brotli11",
+          "best_bytes": 533,
+          "codecs": {
+            "raw": {
+              "bytes": 2329,
+              "encode_ms_single_observation": 0.00035
+            },
+            "zlib9": {
+              "bytes": 731,
+              "encode_ms_single_observation": 0.130115
+            },
+            "gzip9": {
+              "bytes": 743,
+              "encode_ms_single_observation": 0.144326
+            },
+            "bz2-9": {
+              "bytes": 831,
+              "encode_ms_single_observation": 0.281131
+            },
+            "lzma6": {
+              "bytes": 624,
+              "encode_ms_single_observation": 1.110723
+            },
+            "brotli11": {
+              "bytes": 533,
+              "encode_ms_single_observation": 2.340294
+            },
+            "zstd19": {
+              "bytes": 557,
+              "encode_ms_single_observation": 0.792017
+            }
+          }
+        }
+      },
+      "RoseByte_beats_best_tested_alternative": true,
+      "RoseByte_vs_best_alternative_percent": 96.06
+    },
+    {
+      "fixture": "repeated-text",
+      "representations": {
+        "RoseByte-RBS1": {
+          "raw_bytes": 2829,
+          "sha256": "5aa8d5de320bd21c8faf3ecf99bba9dee4f0bd6d87513f66a3bd5521253dc7b3",
+          "best": "brotli11",
+          "best_bytes": 49,
+          "codecs": {
+            "raw": {
+              "bytes": 2829,
+              "encode_ms_single_observation": 0.000922
+            },
+            "zlib9": {
+              "bytes": 65,
+              "encode_ms_single_observation": 0.021171
+            },
+            "gzip9": {
+              "bytes": 77,
+              "encode_ms_single_observation": 0.015263
+            },
+            "bz2-9": {
+              "bytes": 100,
+              "encode_ms_single_observation": 0.205528
+            },
+            "lzma6": {
+              "bytes": 124,
+              "encode_ms_single_observation": 0.938204
+            },
+            "brotli11": {
+              "bytes": 49,
+              "encode_ms_single_observation": 0.493128
+            },
+            "zstd19": {
+              "bytes": 54,
+              "encode_ms_single_observation": 0.029784
+            }
+          }
+        },
+        "JSON-numeric-slots": {
+          "raw_bytes": 3037,
+          "sha256": "d06a1cc2cca5aa67ffdb7b14c3027cef877e076b272d9d5c30c8e7759ff282b5",
+          "best": "brotli11",
+          "best_bytes": 105,
+          "codecs": {
+            "raw": {
+              "bytes": 3037,
+              "encode_ms_single_observation": 0.000541
+            },
+            "zlib9": {
+              "bytes": 123,
+              "encode_ms_single_observation": 0.022142
+            },
+            "gzip9": {
+              "bytes": 135,
+              "encode_ms_single_observation": 0.018528
+            },
+            "bz2-9": {
+              "bytes": 161,
+              "encode_ms_single_observation": 0.209525
+            },
+            "lzma6": {
+              "bytes": 184,
+              "encode_ms_single_observation": 0.868091
+            },
+            "brotli11": {
+              "bytes": 105,
+              "encode_ms_single_observation": 0.6944
+            },
+            "zstd19": {
+              "bytes": 106,
+              "encode_ms_single_observation": 0.056725
+            }
+          }
+        },
+        "CBOR-numeric-slots": {
+          "raw_bytes": 2755,
+          "sha256": "beb6ed8095a2443bc606352f50d6581ab023a1a5bcdeb19cf74e6a93adbeb175",
+          "best": "brotli11",
+          "best_bytes": 82,
+          "codecs": {
+            "raw": {
+              "bytes": 2755,
+              "encode_ms_single_observation": 0.000851
+            },
+            "zlib9": {
+              "bytes": 110,
+              "encode_ms_single_observation": 0.021231
+            },
+            "gzip9": {
+              "bytes": 122,
+              "encode_ms_single_observation": 0.016856
+            },
+            "bz2-9": {
+              "bytes": 155,
+              "encode_ms_single_observation": 0.186168
+            },
+            "lzma6": {
+              "bytes": 164,
+              "encode_ms_single_observation": 0.857885
+            },
+            "brotli11": {
+              "bytes": 82,
+              "encode_ms_single_observation": 0.430906
+            },
+            "zstd19": {
+              "bytes": 94,
+              "encode_ms_single_observation": 0.036976
+            }
+          }
+        },
+        "RBLB1-numeric-slots": {
+          "raw_bytes": 3225,
+          "sha256": "f23496e430ab1f6d69a6f5ce88bc541e9c6951832caea8951cfbe607c273bb6c",
+          "best": "zstd19",
+          "best_bytes": 64,
+          "codecs": {
+            "raw": {
+              "bytes": 3225,
+              "encode_ms_single_observation": 0.000481
+            },
+            "zlib9": {
+              "bytes": 77,
+              "encode_ms_single_observation": 0.018608
+            },
+            "gzip9": {
+              "bytes": 89,
+              "encode_ms_single_observation": 0.015113
+            },
+            "bz2-9": {
+              "bytes": 115,
+              "encode_ms_single_observation": 0.214611
+            },
+            "lzma6": {
+              "bytes": 132,
+              "encode_ms_single_observation": 0.818176
+            },
+            "brotli11": {
+              "bytes": 66,
+              "encode_ms_single_observation": 0.404035
+            },
+            "zstd19": {
+              "bytes": 64,
+              "encode_ms_single_observation": 0.029394
+            }
+          }
+        }
+      },
+      "RoseByte_beats_best_tested_alternative": true,
+      "RoseByte_vs_best_alternative_percent": 23.44
+    },
+    {
+      "fixture": "irregular-ints",
+      "representations": {
+        "RoseByte-RBS1": {
+          "raw_bytes": 981,
+          "sha256": "70470562e021378679be799a86f39f9ca1e7b85e3d2b7ab43d32b5a894c55933",
+          "best": "brotli11",
+          "best_bytes": 437,
+          "codecs": {
+            "raw": {
+              "bytes": 981,
+              "encode_ms_single_observation": 0.000841
+            },
+            "zlib9": {
+              "bytes": 526,
+              "encode_ms_single_observation": 0.034861
+            },
+            "gzip9": {
+              "bytes": 538,
+              "encode_ms_single_observation": 0.024176
+            },
+            "bz2-9": {
+              "bytes": 477,
+              "encode_ms_single_observation": 0.116715
+            },
+            "lzma6": {
+              "bytes": 516,
+              "encode_ms_single_observation": 1.257814
+            },
+            "brotli11": {
+              "bytes": 437,
+              "encode_ms_single_observation": 0.773899
+            },
+            "zstd19": {
+              "bytes": 488,
+              "encode_ms_single_observation": 0.126048
+            }
+          }
+        },
+        "JSON-numeric-slots": {
+          "raw_bytes": 1189,
+          "sha256": "f7d3f6c2e47a77f65b2359e1282232f8bafd57ee89a29adbdbf835d726c9a7a4",
+          "best": "brotli11",
+          "best_bytes": 498,
+          "codecs": {
+            "raw": {
+              "bytes": 1189,
+              "encode_ms_single_observation": 0.000592
+            },
+            "zlib9": {
+              "bytes": 622,
+              "encode_ms_single_observation": 0.035904
+            },
+            "gzip9": {
+              "bytes": 634,
+              "encode_ms_single_observation": 0.030876
+            },
+            "bz2-9": {
+              "bytes": 561,
+              "encode_ms_single_observation": 0.12607
+            },
+            "lzma6": {
+              "bytes": 576,
+              "encode_ms_single_observation": 1.153757
+            },
+            "brotli11": {
+              "bytes": 498,
+              "encode_ms_single_observation": 1.56873
+            },
+            "zstd19": {
+              "bytes": 624,
+              "encode_ms_single_observation": 0.143594
+            }
+          }
+        },
+        "CBOR-numeric-slots": {
+          "raw_bytes": 692,
+          "sha256": "db8f428fea0dad966cb90d93cabcf7574c33bfa9cf8aa9016ec91f85c80fc474",
+          "best": "brotli11",
+          "best_bytes": 505,
+          "codecs": {
+            "raw": {
+              "bytes": 692,
+              "encode_ms_single_observation": 0.000491
+            },
+            "zlib9": {
+              "bytes": 574,
+              "encode_ms_single_observation": 0.041763
+            },
+            "gzip9": {
+              "bytes": 586,
+              "encode_ms_single_observation": 0.038838
+            },
+            "bz2-9": {
+              "bytes": 614,
+              "encode_ms_single_observation": 0.202673
+            },
+            "lzma6": {
+              "bytes": 552,
+              "encode_ms_single_observation": 1.035822
+            },
+            "brotli11": {
+              "bytes": 505,
+              "encode_ms_single_observation": 1.273688
+            },
+            "zstd19": {
+              "bytes": 578,
+              "encode_ms_single_observation": 0.057025
+            }
+          }
+        },
+        "RBLB1-numeric-slots": {
+          "raw_bytes": 2329,
+          "sha256": "bec302b1c254e65794c5c308cf0c24db614efcb351a37fd92d2af99f3c1bc811",
+          "best": "zstd19",
+          "best_bytes": 362,
+          "codecs": {
+            "raw": {
+              "bytes": 2329,
+              "encode_ms_single_observation": 0.00045
+            },
+            "zlib9": {
+              "bytes": 604,
+              "encode_ms_single_observation": 0.210917
+            },
+            "gzip9": {
+              "bytes": 616,
+              "encode_ms_single_observation": 0.218748
+            },
+            "bz2-9": {
+              "bytes": 680,
+              "encode_ms_single_observation": 0.287129
+            },
+            "lzma6": {
+              "bytes": 456,
+              "encode_ms_single_observation": 1.324724
+            },
+            "brotli11": {
+              "bytes": 370,
+              "encode_ms_single_observation": 2.18355
+            },
+            "zstd19": {
+              "bytes": 362,
+              "encode_ms_single_observation": 0.370965
+            }
+          }
+        }
+      },
+      "RoseByte_beats_best_tested_alternative": false,
+      "RoseByte_vs_best_alternative_percent": -20.72
+    }
+  ],
+  "exact_compression_roundtrips": 287,
+  "summary": {
+    "fixtures": 10,
+    "strict_wins_vs_best_other_representation": 9,
+    "universal_winner": false
+  },
+  "dictionary_cold_cost": {
+    "raw_bytes": 3098,
+    "brotli11_bytes": 1080,
+    "sha256": "c460fa881e3e27823b2c8d933d70e3e4593032dfe4c230da5872739fb96edf4b",
+    "charge": "Additional dictionary transfer on a cold receiver, not hidden inside payload-only comparisons. Runtime/compiler installation costs are excluded for all languages.",
+    "audit_RBS1_plus_dictionary_bytes": 1929,
+    "audit_Python_payload_only_bytes": 942,
+    "amortization_repeated_audit_sized_distinct_programs": 12,
+    "warning": "Repeated identical transfers may instead use caching; this is a size arithmetic illustration, not a traffic forecast."
+  },
+  "delivery": "See delivery.json for actual existing authenticated hosted RBW1 packet sizes; no stripped safety checks or new unauthenticated transport.",
+  "scope": "Same alpha-normalized AST for JSON/CBOR/RBLB1/RBS1; original variable/function spellings and comments are not preserved. Python comparison only for the equivalent Audit Lens app. Exact decompression bytes verified separately; no vulnerability/security or universal compressor superiority claim."
+}

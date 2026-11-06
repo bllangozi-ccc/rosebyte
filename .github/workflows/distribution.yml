@@ -10,3 +10,5 @@ jobs:
       - run: python3 tools/check_distribution.py
 
       - run: python3 -m unittest discover -s examples/audit-lens -p test_tool.py -v
+
+      - run: python3 -m unittest discover -s examples/audit-lens-shorthand -p test_example.py -v

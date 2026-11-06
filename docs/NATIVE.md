@@ -34,7 +34,7 @@ Run the bundled application from its installed share directory, choosing a new
 output name each time:
 
 ```sh
-cd /opt/rosebyte-native/releases/0.10.2a1/share
+cd /opt/rosebyte-native/releases/0.11.0a1/share
 rosebyte-native compile examples/release-check.rbl.json /tmp/my-release-check.rblb
 rosebyte-native run /tmp/my-release-check.rblb examples/release-inputs.json
 # {"result":["ready",3]}
@@ -116,3 +116,7 @@ Previously corrupted output cannot be reconstructed without the original source.
 ## Dependency maintenance
 
 Use the supplied release-local library and its hash/licence manifest. The owner/reviewer source package includes native/DEPENDENCIES.md with the authenticated update procedure. On another architecture, build a maintained compatible json-c library for that platform and rerun the qualification; do not reuse the suppliedx86_64ELF.
+
+## Symbol-and-number source
+
+Native0.11.0a1 accepts [RBS1 shorthand](SHORTHAND.md) directly in `compile`, while retained JSON and old bytecode remain compatible. The original source is scanned before parsing; expanded source and bytecode are scanned as well. Code generation remains RB-written. The new parser has separate bounded/sanitizer qualification and awaits independent review.

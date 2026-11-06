@@ -1,0 +1,11 @@
+{
+  "version": "shorthand-hosted-20261106",
+  "encrypted_artifact": "rosebyte-shorthand-hosted-20261106.rbenc",
+  "ciphertext_bytes": 70388,
+  "ciphertext_sha256": "c67466a09d570d11b6c1ea2e371766cf1705c7ba1413bda9da786c9c5e5ae3fd",
+  "recipient_fingerprint": "2368165c6f099481d3d7b743853932a923cec40f15b2eb2fb47a0c8f8ce43607",
+  "plaintext_archive_sha256": "402e1e15fecec7281f97511c987b352b6b793a4c9354ac5bd7d32d9dd9382952",
+  "qualification": "69 core/native checks;79 hosted checks;1000 shorthand application cases in two formats;500 frontend mutations;live scanner-gated compile and both tool outputs;browser checks passed",
+  "independent_frontend_review": "pending",
+  "owner_decryption": "sealed to existing verified recipient; no new owner-secret access or decryption claim"
+}

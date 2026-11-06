@@ -1,0 +1,36 @@
+{
+  "profile": "actual hosted balanced",
+  "safety": "Existing authenticated encrypted RBW1, current project grants, full incoming scan gate; no metadata removed. Packet IDs, account IDs and secrets omitted.",
+  "results": {
+    "shorthand": {
+      "source_bytes": 2259,
+      "compressed_bytes": 939,
+      "complete_RBW1_packet_bytes": 1708,
+      "codec": "brotli",
+      "exact_roundtrip": true
+    },
+    "original_json": {
+      "source_bytes": 6585,
+      "compressed_bytes": 1319,
+      "complete_RBW1_packet_bytes": 2214,
+      "codec": "brotli",
+      "exact_roundtrip": true
+    },
+    "python_equivalent": {
+      "source_bytes": 2428,
+      "compressed_bytes": 1059,
+      "complete_RBW1_packet_bytes": 1868,
+      "codec": "brotli",
+      "exact_roundtrip": true
+    },
+    "dictionary": {
+      "source_bytes": 3098,
+      "compressed_bytes": 1242,
+      "complete_RBW1_packet_bytes": 2112,
+      "codec": "brotli",
+      "exact_roundtrip": true
+    }
+  },
+  "cold_receiver_bytes": 3820,
+  "scope": "These are real complete message packet sizes, excluding TLS/TCP/IP headers. A cold dictionary delivery is additional; repeated delivery assumes the public language dictionary is installed."
+}

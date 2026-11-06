@@ -1,7 +1,9 @@
 # RoseByte
 
-Experimental bounded language and hosted translation service. **0.10.2a1 research preview. Native Unicode decoder and reference equality corrections passed a scoped independent retest; broader security review continues.**
+Experimental bounded language and hosted translation service. **0.11.0a1 shorthand research preview. Underlying 0.10.2a1 Unicode/equality corrections passed a scoped independent retest; the new shorthand frontend awaits its separate independent review.**
 
+- [Symbol-and-number RoseByte syntax, dictionary and measured comparisons](docs/SHORTHAND.md)
+- [Rebuilt shorthand Audit Lens](https://jacknrose.co.uk/tools/audit-lens-shorthand)
 - [Audit Lens: a real RoseByte dependency-report tool](https://jacknrose.co.uk/tools/audit-lens)
 - [Try the hosted translator](https://jacknrose.co.uk/rosebyte)
 - [Public guide](https://jacknrose.co.uk/guide)

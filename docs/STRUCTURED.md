@@ -2,6 +2,8 @@
 
 # RBL1: structured RoseByte and bootstrap
 
+The primary authored form is now [RBS1 symbols and numbers](SHORTHAND.md). This page documents the retained JSON interchange/debug AST and existing bytecode semantics.
+
 RBL1 adds named functions, checked signed 64-bit integers, booleans, text,
 bytes, lists, JSON objects, variables, assignment, conditionals, finite loops,
 function calls and pure buffer/text primitives. It is a research dialect alongside

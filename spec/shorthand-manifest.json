@@ -1,0 +1,9 @@
+{
+  "version": "RBS1-20261106.1",
+  "executable_rows": 57,
+  "sha256": {
+    "shorthand-dictionary.json": "c460fa881e3e27823b2c8d933d70e3e4593032dfe4c230da5872739fb96edf4b",
+    "dictionary.rbs": "796546cc8f0b03614da5c6a634a315cf28e38948214795a1b4e808f02178ed73",
+    "dictionary-shorthand.rblb": "07f77c638dd835879f0e1044d840eb8dde0bd0bf37e985b97f044101876fb51b"
+  }
+}
