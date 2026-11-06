@@ -1,0 +1,10 @@
+{
+  "version": "header-sidebar-20261106",
+  "encrypted_artifact": "rosebyte-header-sidebar-20261106.rbenc",
+  "ciphertext_bytes": 66656,
+  "ciphertext_sha256": "2cda7b2a1aa55ec56e7810833c8586d94ce8e80d6bec97b88b5afa3007b29383",
+  "recipient_fingerprint": "2368165c6f099481d3d7b743853932a923cec40f15b2eb2fb47a0c8f8ce43607",
+  "plaintext_archive_sha256": "2a43485882f924b4ee97234132a280dc37df10752cd5f2f9dfce778bc30db0d5",
+  "qualification": "91 backend checks from conversation update; fresh full browser after sidebar/header changes; shared navigation structure checks; live public header and mobile checks; no production test post",
+  "owner_decryption": "sealed to existing recipient; no new owner-secret access or decryption claim"
+}
