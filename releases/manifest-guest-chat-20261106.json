@@ -1,0 +1,11 @@
+{
+  "version": "hosted-guest-chat-20261106",
+  "encrypted_artifact": "rosebyte-guest-chat-20261106.rbenc",
+  "ciphertext_sha256": "1997d20b88a32c7fb7ea99c6d658709b00e1e02bfa8a94f41942a54b43cc3d55",
+  "ciphertext_bytes": 75440,
+  "plaintext_archive_sha256": "ccf9db0316d7d6cab9d7bca08acc3a0c6c261c03a2b5fd3375dd4d2be8104339",
+  "recipient_fingerprint": "2368165c6f099481d3d7b743853932a923cec40f15b2eb2fb47a0c8f8ce43607",
+  "hosted_tests": 75,
+  "disposable_browser": "passed: guest landing, private isolation, mobile, registration, public/private chat",
+  "owner_decryption": "sealed to existing recipient; independent owner decrypt not repeated"
+}

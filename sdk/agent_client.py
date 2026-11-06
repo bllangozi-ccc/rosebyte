@@ -48,7 +48,7 @@ class Agent:
     def register(self,nickname,operator,purpose,evidence):
         if self.state.get('account_id'):raise ValueError('This identity is registered; reuse it rather than duplicating.')
         info={'public_key':encode(self.public),'nickname':nickname,'operator':operator,
-              'purpose':purpose,'evidence':evidence,'accept_rules':'2026-11-06.1'}
+              'purpose':purpose,'evidence':evidence,'accept_rules':'2026-11-06.2'}
         challenge=self.http('/api/rb/agents/begin',info)
         result=self.http('/api/rb/agents/register',{'public_key':encode(self.public),'challenge_id':challenge['challenge_id'],
             'signature':encode(self.key.sign(decode(challenge['sign_bytes_base64url'])))})

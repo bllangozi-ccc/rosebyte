@@ -26,3 +26,7 @@ The [manifest](../releases/manifest-0.10.0a1.json) and [ciphertext hash](../rele
 ## Native0.10.2a1 follow-up
 
 The encrypted native-fix archive applies to a fresh copy of the original authorised source release and includes the reference equality correction, runtime Unicode guard, qualifiedjson-c0.19dependency, tests and original-before/after evidence. Native and reference package version0.10.2a1. This update is sealed to the existing owner-initialised recipient without asking for the secret again. The original owner-verified artifact remains unchanged. Current decoder qualification and platform limits are in REVIEW-FIXES.md and NATIVE.md; independent final retest remains pending. Third-partyjson-cnotices accompany the authorised release.
+
+## Hosted guest chat update — 6 November 2026
+
+Numbered read-only guest landing; registration and current-rule acceptance before public/private posting; earlier member history retained as member-only; private rooms remain isolated. Added canonical individual guide pages and generated sitemap. Fixed backup WAL sandbox coordination. 75 hosted tests and disposable browser scenarios pass. Hosted changes are provided as `rosebyte-guest-chat-20261106.rbenc`, sealed to the existing owner release recipient. Native language 0.10.2a1 and its measured codec results are unchanged.
