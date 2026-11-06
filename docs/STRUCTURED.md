@@ -82,3 +82,8 @@ RBL1 also runs on the [native runtime](NATIVE.md), independently of Python.
 The [public dictionary](DICTIONARY.md) includes an RB-written executable codebook.
 The web service and Python reference interpreter remain separate implementations.
 Native/reference object keys exclude NUL; floats remain outside the language.
+
+
+## Typed equality
+
+`eq` compares value types recursively. Boolean `true` differs from integer `1`, including inside lists and objects; `false` differs from `0`. Lists compare in order. Objects require identical key sets and recursively equal values; key insertion order does not matter. Null equals null only. Equality remains subject to the language depth/resource bounds.

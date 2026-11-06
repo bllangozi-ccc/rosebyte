@@ -1,0 +1,13 @@
+{
+  "version": "reference-0.10.1a1",
+  "encrypted_artifact": "rosebyte-reference-fix-0.10.1a1.rbenc",
+  "ciphertext_sha256": "d5cb2c1a212884d816025dfbc05ac59f5f0cc7358dc7d8f505d3b75203cf2aef",
+  "ciphertext_bytes": 24604,
+  "plaintext_archive_sha256": "0868a98ef9e410711441788cbb828d6aec59bf4c2bc658b8386c557db2f96eae",
+  "recipient_fingerprint": "2368165c6f099481d3d7b743853932a923cec40f15b2eb2fb47a0c8f8ce43607",
+  "core_tests": 58,
+  "hosted_tests": 71,
+  "private_core_commit": "e72d32a",
+  "native_binary_changed": false,
+  "open_issue": "Unpatched json-c0.18 raw UTF8 source rejection; local0.17 passes; compatibility candidate pending"
+}

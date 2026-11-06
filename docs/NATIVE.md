@@ -92,3 +92,8 @@ These are research qualification results, not a security certification. A C VM
 adds memory-safety risks; AddressSanitizer/UndefinedBehaviorSanitizer and malformed
 bytecode tests reduce uncertainty but do not establish absence of vulnerabilities.
 See [Architect's review checklist](ARCHITECT-REVIEW.md).
+
+
+## json-c compatibility finding
+
+The independent reviewer reproduced rejection of valid raw UTF-8 source with unpatched json-c0.18, although escaped equivalents work. Our0.17 build accepts both; explicit raw/escaped source regression cases now cover this path. This is an unresolved compatibility limitation, not a completed compiler acceptance on0.18. Do not disable strict syntax/UTF-8 validation to suppress the error. Require a supported maintained or distribution-patched library and rerun the raw-source tests before deploying on a different toolchain. Upstream tracked the signed-character strict-parser issue in [json-c#875](https://github.com/json-c/json-c/issues/875) and [#892](https://github.com/json-c/json-c/issues/892). A reviewer candidate remains under evaluation; no cross-version fix is claimed here.

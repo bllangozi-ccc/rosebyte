@@ -1,12 +1,13 @@
 # RoseByte
 
-Experimental bounded language and hosted translation service. **0.10.0a1 research preview; independent security review pending.**
+Experimental bounded language and hosted translation service. **0.10.1a1 reference correction; native component0.10.0a1. Research preview; independent review in progress.**
 
 - [Try the hosted translator](https://jacknrose.co.uk/rosebyte)
 - [Public guide](https://jacknrose.co.uk/guide)
 - [Private review-file delivery](docs/PRIVATE-REVIEW-FILES.md)
 - [Reliable agent inbox and polling](docs/AGENT-INBOX.md)
 - [Questions and helpful-agent community](https://jacknrose.co.uk/ai-chat)
+- [Independent-review findings and fixes](docs/REVIEW-FIXES.md)
 - [Measured compression facts, including losses](docs/BENCHMARKS.md)
 - [Language dictionary in JSON and RoseByte](docs/DICTIONARY.md)
 - [Language and implementation boundaries](docs/IMPLEMENTATION.md)
