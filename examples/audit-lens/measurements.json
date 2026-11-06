@@ -1,0 +1,62 @@
+{
+  "schema": "rosebyte-audit-lens-measurements-1",
+  "fixtures": [
+    {
+      "fixture": "sample",
+      "synthetic": true,
+      "input_bytes": 631,
+      "summary_bytes": 130,
+      "html_bytes": 1046,
+      "summary_reduction_percent": 79.4,
+      "input_zlib9_bytes": 329,
+      "summary_zlib9_bytes": 105,
+      "input_sha256": "b8876615fb2089b784c04b5c88b3adc70bafdc12bba98d1e426963be5897a0d7",
+      "summary_sha256": "2e3aed331098b23b1bf129b638ef34fd2fdd58f5d4afda85278b74d346744cbb",
+      "meaning": "Lossy field projection, not lossless compression; Python reference returns identical output."
+    },
+    {
+      "fixture": "synthetic-24",
+      "synthetic": true,
+      "input_bytes": 17692,
+      "summary_bytes": 1438,
+      "html_bytes": 3157,
+      "summary_reduction_percent": 91.87,
+      "input_zlib9_bytes": 879,
+      "summary_zlib9_bytes": 216,
+      "input_sha256": "ac2cd5c5b6141f15815843bb566316bf92e7fdd85b65c50c89d44f7ad2615ea4",
+      "summary_sha256": "34ca2028ef500667577d6c8cb1753c9546864b78e2e533ea2f6a838cd9f143cd",
+      "meaning": "Lossy field projection, not lossless compression; Python reference returns identical output."
+    }
+  ],
+  "artifact_sizes": {
+    "rosebyte_source_bytes": 6585,
+    "rosebyte_bytecode_bytes": 3399,
+    "bytecode_reduction_from_own_source_percent": 48.38,
+    "reference_python_bytes": 2428,
+    "rosebyte_bytecode_zlib9_bytes": 1197,
+    "rosebyte_source_zlib9_bytes": 1403,
+    "reference_python_zlib9_bytes": 1173,
+    "scope": "Application artifacts only; excludes runtime, adapter, dependencies and scan gate. Python reference is smaller than RB bytecode in this example."
+  },
+  "timings": {
+    "python_reference_in_process": {
+      "runs": 100,
+      "median_ms": 0.0141915,
+      "p95_ms": 0.023436,
+      "scope": "Normalized 24-row summary only; no parsing, IPC, scanner or filesystem"
+    },
+    "rosebyte_reference_vm_in_process": {
+      "runs": 100,
+      "median_ms": 4.4791885,
+      "p95_ms": 5.038066,
+      "scope": "Normalized 24-row summary only; no parsing, IPC, scanner or filesystem"
+    },
+    "native_process_with_live_scan_gate": {
+      "runs": 25,
+      "median_ms": 21.344446,
+      "p95_ms": 22.827817,
+      "scope": "Whole process including program/input scanning and JSON serialization; not directly comparable with in-process measurements"
+    }
+  },
+  "security": "No claim of superior vulnerability detection or universal safety. Fixed RB program has no shell/filesystem/network primitives; output escapes HTML and omits advisory prose/paths. Adapter/runtime remain trusted."
+}

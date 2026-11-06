@@ -60,7 +60,7 @@ The native gate needs a maintained ClamAV installation and current signatures;
 that security dependency is deliberate. No online AI account is required. The
 existing web authentication/issuer/translation service remains separate and
 continues using its qualified Python implementation. Native public guest
-execution has **not** been enabled. Independent Architect review is pending.
+execution has **not** been enabled. Scoped independent 0.10.2a1 review passed; whole-system security certification is not claimed. See [review findings](REVIEW-FIXES.md).
 
 ## Build and independent tests
 

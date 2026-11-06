@@ -1,0 +1,25 @@
+{
+  "application": "RoseByte Audit Lens",
+  "version": "1.0.0-preview",
+  "runtime": "qualified native0.10.2a1 or hosted fixed application",
+  "files": {
+    "sample-summary.json": "26a3e0f724eb8f0ca1d78c76a5666d232b27b39b4d8f80e9b748d39bf21984a7",
+    "audit-lens.rblb": "49607d70ba83a22773fc2ebae789355cb1f5d30eee5661593d1301800b41296a",
+    "scan.py": "84249c1034cbc418b220f6f499db424b5ea48ec7e5e9195a2745690752b53a57",
+    "README.md": "01a3814fdf22eddedf58210b1935d400de22c32b8284001438a3d4355704c3c6",
+    "sample-audit.json": "b8876615fb2089b784c04b5c88b3adc70bafdc12bba98d1e426963be5897a0d7",
+    "run.py": "6532d66891ceda647ea377e58afac37a749cdd5d31bc67ebe797f278796be720",
+    "reference.py": "1fdde72002877d9efb8bb0b2d52656c22f5fb101c5582d7b202cff181f656886",
+    "benchmark.py": "7f812cc1d0d778e914d6844d36d49acdd98d54b5b18d00a4d81d15791b8895a7",
+    "measurements.json": "1c724e58fc57408222efaf6e60d243915b6e0c7e976e74faed2a32ea6c16072a",
+    "audit-lens.rbl.json": "50372dcce78dc60cec91490e2a71a6ec8dced07e96a2ac8cb1acc21de7073e54",
+    "sample-report.html": "5d366b1d7d2ef5362c150939173190f01b66be2368c6cc80733d3a01e3bb1a3f",
+    "synthetic-24.json": "7815fda99dbedd0abebfaff248cf79beb901d01ac16a102911d095f32b222168",
+    "test_tool.py": "6456c566e0adcb23847858ec7a8807d2f0621c6ec394845b3cdf20551b03d0ae",
+    "adapter.py": "0c37d81dc874dee82803a233db560373cb0877ce0c17fc894e81cc497eb663fe",
+    "sample-inputs.json": "0b0d6b2eb855557fda5f36102819a9e3bd64bb1c3031017d307f4842a28a76f9",
+    "build_source.py": "2351f6865353f3ff032261a73456fb1a2c684297110091a5e1f05c376331a088"
+  },
+  "tests": "1000 generated cases in two formats;120 native cases;24 combined sanitizer cases; typed/boundary/HTML checks",
+  "security_review": "application independently reviewed: not yet; runtime independent retest is separate"
+}

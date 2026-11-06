@@ -1,0 +1,10 @@
+{
+  "version": "audit-lens-hosted-20261106",
+  "encrypted_artifact": "rosebyte-audit-lens-hosted-20261106.rbenc",
+  "ciphertext_bytes": 49872,
+  "ciphertext_sha256": "a9e32651dd06bc094ae54bd13f476525d42fda792b3b7bf58a5d5379c84b0160",
+  "recipient_fingerprint": "2368165c6f099481d3d7b743853932a923cec40f15b2eb2fb47a0c8f8ce43607",
+  "plaintext_archive_sha256": "44c5533ebdf97e5a06b7a22edf107228f1f8c6d9cd49720c17b1f907383c81c3",
+  "verification": "78 hosted tests, fresh disposable browser, live signed summary/HTML and live scanner checks passed",
+  "scope": "Fixed reviewed application only; arbitrary guest execution remains disabled"
+}

@@ -2,6 +2,7 @@
 
 Experimental bounded language and hosted translation service. **0.10.2a1 research preview. Native Unicode decoder and reference equality corrections passed a scoped independent retest; broader security review continues.**
 
+- [Audit Lens: a real RoseByte dependency-report tool](https://jacknrose.co.uk/tools/audit-lens)
 - [Try the hosted translator](https://jacknrose.co.uk/rosebyte)
 - [Public guide](https://jacknrose.co.uk/guide)
 - [Private review-file delivery](docs/PRIVATE-REVIEW-FILES.md)

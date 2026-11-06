@@ -8,3 +8,5 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       - run: python3 tools/check_distribution.py
+
+      - run: python3 -m unittest discover -s examples/audit-lens -p test_tool.py -v
