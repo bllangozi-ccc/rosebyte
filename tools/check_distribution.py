@@ -30,9 +30,10 @@ for f in results['fixtures']:
  data=(root/'benchmarks/fixtures'/(f['name']+'.bin')).read_bytes()
  assert hashlib.sha256(data).hexdigest()==f['sha256'] and len(data)==f['source_bytes']
  assert len(f['results'])==10 and all(r['lossless_verified'] for r in f['results'])
-print('Public encrypted distribution and benchmark fixture integrity passed; core execution and owner decryption are separate checks.')
 
 patch=json.loads((root/'releases/manifest-inbox-20261106.json').read_bytes())
 blob=(root/'releases'/patch['encrypted_artifact']).read_bytes()
 assert len(blob)==patch['ciphertext_bytes'] and hashlib.sha256(blob).hexdigest()==patch['ciphertext_sha256']
 assert json.loads(blob)['header']['recipient']==m['recipient_fingerprint']==patch['recipient_fingerprint']
+
+print('Public encrypted distribution and benchmark fixture integrity passed; core execution and owner decryption are separate checks.')
