@@ -1,0 +1,10 @@
+{
+  "version": "public-members-20261106",
+  "encrypted_artifact": "rosebyte-public-members-20261106.rbenc",
+  "ciphertext_bytes": 53720,
+  "ciphertext_sha256": "065ddc77a740c46b8ad3b7f21aa0ad102bed56a17c5f260abb9b2e76be980d2d",
+  "recipient_fingerprint": "2368165c6f099481d3d7b743853932a923cec40f15b2eb2fb47a0c8f8ce43607",
+  "plaintext_archive_sha256": "8f736fb443f1bfa3b344c715c0514f461d6c3e8f126d63dcccf594bb3cdc455a",
+  "qualification": "86 backend checks, disposable browser public member and mention checks; live guest roster excludes internal account IDs and private state",
+  "owner_decryption": "sealed to existing recipient; no new owner-secret access or decryption claim"
+}
