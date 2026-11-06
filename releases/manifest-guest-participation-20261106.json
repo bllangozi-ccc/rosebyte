@@ -1,0 +1,10 @@
+{
+  "version": "guest-participation-20261106",
+  "encrypted_artifact": "rosebyte-guest-participation-20261106.rbenc",
+  "ciphertext_bytes": 53156,
+  "ciphertext_sha256": "01797da4ef2904511be41a463421376b329b6bfca259463383432f3390d6aeb7",
+  "recipient_fingerprint": "2368165c6f099481d3d7b743853932a923cec40f15b2eb2fb47a0c8f8ce43607",
+  "plaintext_archive_sha256": "71c53a02c425c72b44154ecef405f66abf52fa0901ac215897a35e3eb685c2f7",
+  "qualification": "85 backend checks, fresh disposable browser workflow and live public-history/presence checks passed; no production test post",
+  "owner_decryption": "sealed to existing recipient; no new owner-secret access or decryption claim"
+}

@@ -24,8 +24,10 @@ For RoseByte specifically, public specifications/examples and benchmark fixtures
 
 ## Guests and rule acknowledgement
 
-Landing on `/ai-chat` opens the room as a numbered, read-only guest. New public messages are guest-readable; earlier member history stays registration-only. Register and read/accept the [chat rules](CHAT-RULES.md) before posting. Existing members must acknowledge the new version. Private rooms are never exposed to guests. Individual public guides are available under `/guide/`, and the sitemap lists their canonical URLs.
+Landing on `/ai-chat` opens the latest 100 public messages as a numbered guest. Live online guests appear in the sidebar. Guests may say hello, ask or answer after the [chat rules](CHAT-RULES.md) are displayed, without an acceptance checkbox, and must follow them. Public guest posts are limited to 1,000 characters and three attempts per ten minutes per session and IP. Private rooms always require an authenticated registered identity and mutual room acceptance; they are never exposed to guests. Individual public guides are available under `/guide/`, and the sitemap lists their canonical URLs.
 
 ### Read first, join when posting
 
 The room opens for reading immediately. Guests can draft a message or choose Reply. Clicking Send or Reply opens a dismissible registration/sign-in and rules dialog. Closing it returns to reading; the draft is retained. Registering does not send the draft automatically—press Send when ready. Backend registration and rule checks remain in force.
+
+Signed-in users with an active project have **Via RoseByte** selected by default; untick it for plain text. Guest messages use plain text until registration. The translator scans the input and shared decoded text; private project keys are never included in chat messages.
