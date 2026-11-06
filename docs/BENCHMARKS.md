@@ -2,11 +2,11 @@
 
 This is an internal, seeded synthetic benchmark, not independent verification or a universal superiority claim. All 120 fixture/method pairs passed exact lossless round trips. Twelve fixtures cover greetings, numeric sequences, JSON, source-shaped text, prose, Unicode and entropy. Each method used two warmups and eleven measured iterations in a fresh process. No compression dictionary was used. Full timings, CPU, peak process RSS, hashes and common authenticated-envelope sizes are in [the JSON report](../benchmarks/results-20261106.json); original fixture bytes are [available](../benchmarks/fixtures).
 
-Baselines: zlib 6/9, Brotli 5/11, Zstandard 3/19. RB profiles select maintained codecs or an exact structural transform; selecting an existing codec does not make it a new entropy coder. The best baseline below means the smallest payload among those six settings, without pretending their CPU costs are equal.
+Baselines: zlib 6/9, Brotli 5/11, Zstandard 3/19. RoseByte profiles select maintained codecs or an exact structural transform; selecting an existing codec does not make it a new entropy coder. The best baseline below means the smallest payload among those six settings, without pretending their CPU costs are equal.
 
-**RB balanced: 2 smaller payloads, 1 tie, 9 larger payloads against those high-density baselines. It does not currently beat existing codecs generally.** Against only zlib6/Brotli5/Zstd3 it had two wins and ten ties. One win is a 17-byte greeting sent raw to avoid compression expansion; raw transmission is available to everyone. The other is a specific numeric sequence, not general-purpose evidence.
+**RoseByte balanced: 2 smaller payloads, 1 tie, 9 larger payloads against those high-density baselines. It does not currently beat existing codecs generally.** Against only zlib6/Brotli5/Zstd3 it had two wins and ten ties. One win is a 17-byte greeting sent raw to avoid compression expansion; raw transmission is available to everyone. The other is a specific numeric sequence, not general-purpose evidence.
 
-| Fixture | Source B | RB balanced B | Smallest baseline (B) | RB encode median ms | Best-size baseline encode ms |
+| Fixture | Source B | RoseByte balanced B | Smallest baseline (B) | RoseByte encode median ms | Best-size baseline encode ms |
 |---|---:|---:|---|---:|---:|
 | short-greeting | 17 | 17 | brotli-5 (21) | 0.0589 | 0.0082 |
 | squares-2000 | 14537 | 54 | zstd-19 (5210) | 0.9679 | 1.9746 |
@@ -21,6 +21,6 @@ Baselines: zlib 6/9, Brotli 5/11, Zstandard 3/19. RB profiles select maintained 
 | generated-docs-65536 | 65536 | 2776 | brotli-11 (1939) | 1.3087 | 78.0224 |
 | unicode-records | 18156 | 1355 | brotli-11 (923) | 0.4069 | 17.0827 |
 
-The JSON retains all RB latency/smallest profiles and every baseline, rather than only the winning rows. Selection often adds CPU time; smaller bytes do not imply faster execution. Timing results are local CPU measurements, not network throughput or AI-token savings. Peak RSS includes the Python interpreter and loaded libraries. The same BENCH-AEAD-1 authenticated envelope was used for every method, including nonce, tag, signature and JSON; it is not the production RBW1 protocol. Decoder installation costs are excluded equally. Public opcode dictionaries are language specifications, not compression dictionaries.
+The JSON retains all RoseByte latency/smallest profiles and every baseline, rather than only the winning rows. Selection often adds CPU time; smaller bytes do not imply faster execution. Timing results are local CPU measurements, not network throughput or AI-token savings. Peak RSS includes the Python interpreter and loaded libraries. The same BENCH-AEAD-1 authenticated envelope was used for every method, including nonce, tag, signature and JSON; it is not the production RBW1 protocol. Decoder installation costs are excluded equally. Public opcode dictionaries are language specifications, not compression dictionaries.
 
 The native language bootstrap tests and codec benchmark measure different things. No before/after performance gain from native execution is inferred from this compression run. Further improvements need representative workloads, reproducible measurements and independent review.

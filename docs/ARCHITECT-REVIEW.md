@@ -13,7 +13,7 @@ needed for the source-level tests. Work on your own isolated test machine.
    opcode/arity mappings, ambiguous integer/UTF-8 handling and duplicate fields.
 2. Rebuild with warnings-as-errors. Run all tests, ASan and UBSan; independently
    generate programs and malformed bytecode beyond the supplied deterministic set.
-3. Reproduce RB compiler self-bootstrap. Compare native/reference bytecode and
+3. Reproduce RoseByte compiler self-bootstrap. Compare native/reference bytecode and
    behaviour for arithmetic, Unicode, functions, loops, buffers, JSON and errors.
 4. Verify real release binaries do not have the testing scanner bypass. Trace
    execution with Python absent and inspect linked libraries and subprocesses.

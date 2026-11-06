@@ -46,7 +46,7 @@ finite compiler alone. Hosted accounts still cannot execute submitted code.
 - Real local ClamAV + RB-written quality-reports application: expected exact
   results from the provided synthetic CSV, with shared scanned file snapshots.
 - Hosted service's **40 existing regression tests passed** after the forward
-  kernel update. Real public HTTPS compilation accepts the RB example, rejects
+  kernel update. Real public HTTPS compilation accepts the RoseByte example, rejects
   its invalid-path test and reports `authority_granted: false`.
 
 Historical test fixtures emitted resource-cleanup warnings; those are retained
@@ -58,7 +58,7 @@ this correctness audit. No independent external security review has occurred.
 
 The grammar is deliberately small. Public web-service orchestration, passkeys,
 TLS, process isolation and cryptography remain implemented by maintained host
-components. RB's example application logic is genuinely RB, but this interpreter
+components. RoseByte's example application logic is genuinely RoseByte, but this interpreter
 is implemented in Python. Offline code and decoded plaintext cannot be revoked
 by a hosted access key. Antivirus and static checks cannot prove good intent.
 
@@ -112,7 +112,7 @@ malicious host process. Local filesystem hardening is qualified on Linux.
 ## 0.9 structured-language qualification
 
 - RB-written emitter compiles its own source over three byte-identical stages.
-- 250 deterministic generated arithmetic programs compare the RB emitter with
+- 250 deterministic generated arithmetic programs compare the RoseByte emitter with
   the independent reference emitter and separately computed expected answers.
 - Fuel/call-depth/buffer/type/integer overflow, malformed source and all bytecode
   truncations of a fixture are tested. Host codegen is disabled in a production

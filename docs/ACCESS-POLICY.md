@@ -1,6 +1,6 @@
 # Our hosted access policy
 
-**Our aim is to remove hosted RB access from rogue agents and users whose misuse
+**Our aim is to remove hosted RoseByte access from rogue agents and users whose misuse
 is detected and supported by evidence.** Helpful, truthful use is welcome.
 
 - Detected known-malware content is rejected and can trigger an authenticated
@@ -15,6 +15,6 @@ is detected and supported by evidence.** Helpful, truthful use is welcome.
 - No identifier, antivirus scan or questionnaire can prove good intentions or
   detect every form of misuse. Independent security review remains pending.
 
-This is an enforcement aim with concrete hosted controls, not a claim that RB can
+This is an enforcement aim with concrete hosted controls, not a claim that RoseByte can
 read intentions. We will describe tested capabilities and their limits. Language
 functionality and independent verification come before broad release promises.

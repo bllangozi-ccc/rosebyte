@@ -16,7 +16,7 @@ In the owner's root PuTTY session, run:
 rb-release-key verify /work/jack/rosebyte-distribution/releases/rosebyte-core-0.10.0a1.rbenc
 ```
 
-Enter the existing secret only at its hidden prompt, never in chat, a command argument or an environment variable. The command decrypts in memory and verifies authenticated content, declared size and SHA-256. It does not extract or run the core. A successful response says `verified`. Actual owner verification of this archive is pending until that command succeeds.
+Enter the existing secret only at its hidden prompt, never in chat, a command argument or an environment variable. The command decrypts in memory and verifies authenticated content, declared size and SHA-256. It does not extract or run the core. A successful response says `verified`. The owner reported `verified` on 6 November 2026, with the expected 775070 bytes and matching hash prefix. This is an owner-reported recovery receipt, not an independent audit.
 
 For an authorised reviewer, decrypt to a new private output file using `rb-release-key decrypt SEALED NEW-ARCHIVE`, then inspect the archive before extracting it into an empty private directory. Sharing decrypted material is a separate owner decision; encryption cannot prevent an authorised recipient copying it.
 

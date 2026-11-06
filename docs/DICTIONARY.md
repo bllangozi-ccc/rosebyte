@@ -2,16 +2,16 @@
 
 # Public language dictionary
 
-Rosebyte's executable-language dictionary is public, versioned and testable.
+RoseByte's executable-language dictionary is public, versioned and testable.
 Version `2026-11-06.1` defines the current RBL1 primitive opcodes, expression tags,
 statement tags, types and limits, plus the RBT2 pipeline instruction dictionary.
 
 - [Readable JSON specification](https://github.com/bllangozi-ccc/rosebyte/blob/main/spec/dictionary.json)
-- [Dictionary written as an RB program](https://github.com/bllangozi-ccc/rosebyte/blob/main/spec/dictionary.rbl.json)
-- [Compiled RB dictionary](https://github.com/bllangozi-ccc/rosebyte/blob/main/spec/dictionary.rblb)
+- [Dictionary written as an RoseByte program](https://github.com/bllangozi-ccc/rosebyte/blob/main/spec/dictionary.rbl.json)
+- [Compiled RoseByte dictionary](https://github.com/bllangozi-ccc/rosebyte/blob/main/spec/dictionary.rblb)
 - [SHA-256 manifest](https://github.com/bllangozi-ccc/rosebyte/blob/main/spec/dictionary-manifest.json)
 
-The RB program returns 53 public codebook rows. Both the native and reference
+The RoseByte program returns 53 public codebook rows. Both the native and reference
 runtimes must return identical rows. The native primitive-name/arity table is
 reproducibly generated from the same public specification and checked alongside
 compiler self-bootstrap and differential primitive tests.

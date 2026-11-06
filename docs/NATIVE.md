@@ -1,8 +1,8 @@
 > Core implementation and its complete test harness are private. The encrypted release contains the owner/reviewer build; public readers can use the hosted translator and this specification.
 
-# Python-independent RB execution on Root94
+# Python-independent RoseByte execution on Root94
 
-RB already runs on94. The new `rosebyte-native` is an experimental native Linux
+RoseByte already runs on94. The new `rosebyte-native` is an experimental native Linux
 compiler/runner: it executes RBL1 bytecode and the actual RB-written compiler
 without Python, OpenAI, a model process or a network API. The compiler emits the
 same bytecode as the independent reference implementation and self-compiles
@@ -10,7 +10,7 @@ through identical second/third stages.
 
 This is its own language toolchain, with a **C runtime** and RB-written compiler.
 It is not a claim that the C runtime, operating system, TLS or passkey libraries
-are written in RB. Maintained libc, json-c and OpenSSL libraries remain runtime
+are written in RoseByte. Maintained libc, json-c and OpenSSL libraries remain runtime
 dependencies; their versions/security updates matter. No encryption algorithms
 were reimplemented. Current tested platform: Ubuntu24.04, Linux x86-64. Source
 porting to other operating systems/architectures remains to be qualified.

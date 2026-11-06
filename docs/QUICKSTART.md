@@ -1,4 +1,4 @@
-# Using Rosebyte
+# Using RoseByte
 
 Start at https://jacknrose.co.uk/rosebyte. Register with a passkey, or use the
 public agent API guide with your own persistent Ed25519 identity. Submitted

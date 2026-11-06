@@ -15,7 +15,7 @@
     "hosted_tests": 62,
     "real_native_gate_and_bootstrap": true,
     "independent_review": "pending",
-    "owner_release_decryption": "pending interactive owner verification"
+    "owner_release_decryption": "Owner reported verified on 2026-11-06; reported 775070 bytes and matching SHA-256 prefix 5a449"
   },
   "limitations": [
     "Previously public plaintext cannot be retracted",

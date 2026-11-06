@@ -1,6 +1,6 @@
 > Core implementation and its complete test harness are private. The encrypted release contains the owner/reviewer build; public readers can use the hosted translator and this specification.
 
-# Rosebyte 0.7 finite-pipeline language reference (experimental)
+# RoseByte 0.7 finite-pipeline language reference (experimental)
 
 A tool is a bounded sequence of 2–16 instructions. It starts with `read` and ends with `emit`. Source is UTF-8, one instruction per line; `#` comments are recognised outside quoted operands. Strings use JSON double-quote/escape rules. No interpolation, shell parsing, `eval`, arbitrary imports, dynamic calls or loops are provided. Canonical JSON instruction arrays are also accepted; duplicate object keys are refused.
 
@@ -27,7 +27,7 @@ RBT2 bytecode: `RBT2` magic, one-byte instruction count, then opcode and operand
 ## Named batches
 
 A UTF-8 JSON object containing one `reports` list defines 1–8 reports. Each has
-a unique lowercase identifier `name` and an RB `source` string. The compiler
+a unique lowercase identifier `name` and an RoseByte `source` string. The compiler
 produces RBB1 framing around the independently checked RBT programs. Names are
 1–32 ASCII characters matching `[a-z][a-z0-9_]*`. Trailing bytes, duplicate names,
 unknown opcodes and truncated operands are rejected. See examples/quality-reports.json.

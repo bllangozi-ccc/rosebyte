@@ -1,6 +1,6 @@
 > Core implementation and its complete test harness are private. The encrypted release contains the owner/reviewer build; public readers can use the hosted translator and this specification.
 
-# RBL1: structured Rosebyte and bootstrap
+# RBL1: structured RoseByte and bootstrap
 
 RBL1 adds named functions, checked signed 64-bit integers, booleans, text,
 bytes, lists, JSON objects, variables, assignment, conditionals, finite loops,
@@ -23,17 +23,17 @@ python3 -m rosebyte compile-rbl example.rbl.json example.rblb
 python3 -m rosebyte run-rbl example.rblb --inputs inputs.json
 ```
 
-`bootstrap/compiler.rbl.json` is the actual RB compiler source. The small Python
+`bootstrap/compiler.rbl.json` is the actual RoseByte compiler source. The small Python
 `bootstrap/build_source.py` authors that JSON AST; it does not generate bytecode.
 The packaged compiler and its source are hash-bound by `manifest.json`.
 
-Stage zero is an independent Python reference compiler. It compiles the RB
-compiler once; that RB program compiles its own source again, then a third time.
+Stage zero is an independent Python reference compiler. It compiles the RoseByte
+compiler once; that RoseByte program compiles its own source again, then a third time.
 All three bytecode artifacts must be identical, and match the packaged artifact.
-The normal RBL compilation path executes the RB emitter, not the reference
+The normal RBL compilation path executes the RoseByte emitter, not the reference
 emitter. Input validation and independent decoded-output comparison surround it.
 
-The RB compiler implements instruction selection, function metadata, statement
+The RoseByte compiler implements instruction selection, function metadata, statement
 and expression emission, primitive opcode selection and byte-buffer assembly.
 Its fixed primitives offer JSON parsing and byte packing, **not a hidden call to
 the Python compiler**. Tests replace the reference emitter with an exception to
@@ -56,17 +56,17 @@ JSON object access, concatenation, UTF-8, byte packing, finite split/join, slici
 and HTML escaping. All guest functions share a single fuel budget.
 
 The hosted translator can compile RBL1 but **does not run submitted programs**.
-Its fixed trusted RB compiler runs inside the existing bounded transform process.
+Its fixed trusted RoseByte compiler runs inside the existing bounded transform process.
 Local execution is an explicit separate command with scanned input; the runtime
 itself is still a trusted Python implementation. This is compiler self-hosting,
-not a claim that TLS, passkeys, crypto, the VM or the whole website are written in RB.
+not a claim that TLS, passkeys, crypto, the VM or the whole website are written in RoseByte.
 
-## A small complete RB application
+## A small complete RoseByte application
 
 `examples/release-check.rbl.json` uses two functions, conditionals, looping and
 accumulators to validate bounded release-test reports. It returns `ready` only
 if all reports passed and had nonnegative durations; otherwise `needs_work`.
-Its application logic is RB, not a Python command hidden behind an RB wrapper.
+Its application logic is RoseByte, not a Python command hidden behind an RoseByte wrapper.
 
 ```sh
 python3 -m rosebyte compile-rbl examples/release-check.rbl.json release-check.rblb

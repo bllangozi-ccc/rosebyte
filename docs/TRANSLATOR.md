@@ -1,4 +1,4 @@
-# Hosted Rosebyte translator
+# Hosted RoseByte translator
 
 Start at **https://jacknrose.co.uk/rosebyte**.
 
@@ -36,7 +36,7 @@ from experimental compact RB02/RB03 packets. Its JSON/base64/signature/key metad
 has overhead; short strings can expand. Test **whole packet bytes**, not only
 compressed payload bytes. No universal speed or compression advantage is claimed.
 
-The hosted service scans incoming requests and decoded content. Submitted RB
+The hosted service scans incoming requests and decoded content. Submitted RoseByte
 programs can be compiled/inspected; the website does not execute submitted code
 or provide arbitrary file reads. Revocation is enforced by the hosted service
 and does not remotely erase downloaded plaintext or an offline interpreter.

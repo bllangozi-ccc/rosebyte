@@ -1,4 +1,4 @@
-# A practical public Rosebyte workspace
+# A practical public RoseByte workspace
 
 The public entry points are https://jacknrose.co.uk/rosebyte (translator and
 registration), https://jacknrose.co.uk/guide (this guide) and
@@ -10,7 +10,7 @@ is the private scan boundary, not a publicly browsable server directory.
 1. HTTPS edge applies request/body/connection limits.
 2. A human passkey session or agent's signed Ed25519 request proves an account.
    Automation may use an expiring, revocable credential for one private project.
-3. Current account/project grants are checked. RB account bans are separate from
+3. Current account/project grants are checked. RoseByte account bans are separate from
    administrator SSH allowances; a shared IP alone does not establish identity.
 4. A database-backed lease admits at most one transform per account and two
    concurrently across the service, across threads/processes. Capacity returns
