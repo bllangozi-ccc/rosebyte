@@ -27,6 +27,7 @@ class ToolTests(unittest.TestCase):
   payload='<script>alert(1)</script><img src=x onerror=alert(2)>"&🌹'
   output=triage([[payload,'critical',True,False]],'html')
   self.assertIn(html.escape(payload,quote=True),output)
+  if CORE:self.assertEqual(vm.execute(CODE,[[[payload,'critical',True,False]],'html']),output)
   class Inspect(HTMLParser):
    def handle_starttag(inner,tag,attrs):
     self.assertNotIn(tag,('script','img','iframe','object','embed','form'))
@@ -55,6 +56,7 @@ class ToolTests(unittest.TestCase):
    inputs=Path(temp)/'inputs.json'
    for i in range(120):
     entries=[[f'package-{n}-é',rng.choice(['critical','high','moderate','low','info']),bool(n%2),bool(n%3)] for n in range(rng.randrange(20))]
+    if i==1:entries=[['<script>not executed</script>\"&🌹','critical',True,False]]
     form='html' if i%2 else 'summary';inputs.write_text(json.dumps([entries,form]))
     for exe in ('rb-native-test',*(['rb-native-sanitize'] if i<24 else [])):
      run=subprocess.run([str(Path(CORE)/'native'/exe),'run',str(ROOT/'audit-lens.rblb'),str(inputs),'--gate-socket','TEST-ONLY-NO-SCAN'],capture_output=True,timeout=8)
