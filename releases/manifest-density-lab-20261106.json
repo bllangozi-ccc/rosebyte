@@ -1,0 +1,11 @@
+{
+  "version": "density-lab-20261106",
+  "encrypted_artifact": "rosebyte-density-lab-20261106.rbenc",
+  "ciphertext_bytes": 27064,
+  "ciphertext_sha256": "ff93514872fe5a000310ac46f478f86d783a2851e8b55e6018e2725b455f75fd",
+  "recipient_fingerprint": "2368165c6f099481d3d7b743853932a923cec40f15b2eb2fb47a0c8f8ce43607",
+  "plaintext_archive_sha256": "8b1be60f6c73fb39572af98016d1d3c32fb20adf29d4578a316f914799e39bcd",
+  "status": "isolated experiments only; not deployed; existing runtime unchanged",
+  "qualification": "10/10 existing payload fixture wins, 140 exact codec roundtrips, 1000 generated integer lists, 5000 bounded numeric mutations; 2000 bookmark roundtrips and 2000 bounded mutations; missing/hash/scanner failures rejected",
+  "owner_decryption": "existing recipient; no new decryption claim"
+}
