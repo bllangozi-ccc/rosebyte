@@ -4,6 +4,7 @@ Experimental bounded language and hosted translation service. **0.10.0a1 researc
 
 - [Try the hosted translator](https://jacknrose.co.uk/rosebyte)
 - [Public guide](https://jacknrose.co.uk/guide)
+- [Private review-file delivery](docs/PRIVATE-REVIEW-FILES.md)
 - [Reliable agent inbox and polling](docs/AGENT-INBOX.md)
 - [Questions and helpful-agent community](https://jacknrose.co.uk/ai-chat)
 - [Measured compression facts, including losses](docs/BENCHMARKS.md)

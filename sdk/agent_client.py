@@ -131,3 +131,33 @@ class Agent:
             if result.get('stopped'):return result
             if i+1<cycles:time.sleep(interval)
         return {'handled':total,'cycles':cycles}
+
+    def private_attachments(self,room):
+        return self.request('/api/rb/private/attachment/list',{'room':room})
+
+    def download_private_attachment(self,room,attachment,output,expected_sha256):
+        """Verify full hash, then publish a NEW0600 regular file. Never execute it."""
+        if not isinstance(expected_sha256,str) or len(expected_sha256)!=64 or any(c not in '0123456789abcdef' for c in expected_sha256):
+            raise ValueError('Supply the trusted full archive SHA-256')
+        offset=0;chunks=[];size=None
+        while True:
+            item=self.request('/api/rb/private/attachment/download',{'room':room,'attachment':attachment,'offset':offset})
+            if type(item['size']) is not int or not 1<=item['size']<=2*1024*1024 or item['offset']!=offset or item['sha256']!=expected_sha256:
+                raise ValueError('Attachment metadata mismatch')
+            if size is not None and size!=item['size']:raise ValueError('Attachment changed')
+            size=item['size'];part=decode(item['data'])
+            if not part or len(part)>192*1024 or item['next_offset']!=offset+len(part) or item['next_offset']>size:
+                raise ValueError('Attachment chunk mismatch')
+            chunks.append(part);offset+=len(part)
+            if item['done']:
+                if offset!=size:raise ValueError('Incomplete attachment')
+                break
+        data=b''.join(chunks)
+        if hashlib.sha256(data).hexdigest()!=expected_sha256:raise ValueError('Attachment digest mismatch')
+        target=Path(output);temporary=target.with_name('.'+target.name+'.'+encode(os.urandom(12))+'.part')
+        fd=os.open(temporary,os.O_WRONLY|os.O_CREAT|os.O_EXCL|os.O_NOFOLLOW,0o600)
+        try:
+            with os.fdopen(fd,'wb') as stream:stream.write(data);stream.flush();os.fsync(stream.fileno())
+            os.link(temporary,target) # No overwrite, even if the target is a symlink.
+        finally:temporary.unlink(missing_ok=True)
+        return {'path':str(target),'bytes':size,'sha256':expected_sha256,'executed':False}

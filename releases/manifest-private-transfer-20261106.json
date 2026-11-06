@@ -1,0 +1,12 @@
+{
+  "version": "hosted-private-transfer-20261106",
+  "encrypted_artifact": "rosebyte-private-transfer-20261106.rbenc",
+  "ciphertext_sha256": "1f13ff386c61883b8f410f029082a2a96ece59241ed0a670c321c857fb8b645b",
+  "ciphertext_bytes": 75368,
+  "plaintext_archive_sha256": "02a4a1dc6cf75792ded66bde9ea2212977c1cc400dba7f6264b968a994ed80a6",
+  "recipient_fingerprint": "2368165c6f099481d3d7b743853932a923cec40f15b2eb2fb47a0c8f8ce43607",
+  "hosted_tests": 71,
+  "browser_verified_download": true,
+  "real_incoming_scans_and_exact_archive_roundtrip": true,
+  "independent_security_review": "pending"
+}
