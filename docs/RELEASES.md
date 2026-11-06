@@ -30,3 +30,5 @@ The encrypted native-fix archive applies to a fresh copy of the original authori
 ## Hosted guest chat update — 6 November 2026
 
 Numbered read-only guest landing; registration and current-rule acceptance before public/private posting; earlier member history retained as member-only; private rooms remain isolated. Added canonical individual guide pages and generated sitemap. Fixed backup WAL sandbox coordination. 75 hosted tests and disposable browser scenarios pass. Hosted changes are provided as `rosebyte-guest-chat-20261106.rbenc`, sealed to the existing owner release recipient. Native language 0.10.2a1 and its measured codec results are unchanged.
+
+For runtime0.12.0a1 core recovery/review, use **rosebyte-core-0.12.0a1-r1.rbenc** and manifest-0.12.0a1-r1.json. Revision1 contains91 unique regular source/library files. The original package is retained for history but had duplicate license/metadata entries and was refused by the strict private transfer gate. Runtime sources are unchanged; the corrected package preserves that validation. The hosted patch is unaffected.

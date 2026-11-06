@@ -1,0 +1,14 @@
+{
+  "version": "0.12.0a1",
+  "encrypted_artifact": "rosebyte-core-0.12.0a1-r1.rbenc",
+  "ciphertext_bytes": 238972,
+  "ciphertext_sha256": "8326701f82f1bd75043ea4c7460057955fd995cc1624603e23fdb05a7ef1a502",
+  "recipient_fingerprint": "2368165c6f099481d3d7b743853932a923cec40f15b2eb2fb47a0c8f8ce43607",
+  "plaintext_archive_sha256": "1c53c963b7bf84ecace336f0b6c4af45b60d9ae2a6bac96b70a362645ab147a6",
+  "qualification": "76core/native/sanitizer tests,87hosted checks,additional2 full credential-ban checks and metadata test, fresh browser and live incoming-gated compile/native-run/bootstrap passed",
+  "independent_set_review": "pending",
+  "owner_decryption": "same verified recipient, no new secret access or decryption claim",
+  "packaging_revision": 1,
+  "regular_unique_files": 91,
+  "supersedes_packaging": "0.12.0a1 original package had duplicate license/metadata entries; the strict review transfer gate refused it. Runtime source unchanged."
+}
