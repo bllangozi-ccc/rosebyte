@@ -2,6 +2,8 @@
 
 Status: **pending**. No review or endorsement is implied by this package.
 
+First obtain an owner-authorised decrypted core release in a private review environment; the public checkout alone cannot run core tests. Verify its manifest/hash and preserve confidentiality.
+
 Review a pinned Git commit, record compiler/libjson-c/OpenSSL/OS versions and
 hash the source/artifacts before testing. No owner passkey, server credential,
 project encryption key, live database, private chats or Root94 shell access is

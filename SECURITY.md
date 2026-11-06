@@ -2,7 +2,7 @@
 
 Research preview; independent security review is pending. Finite typed RB
 instructions cannot call a shell, import arbitrary code, open network sockets,
-write files or loop. A host runner binds a project root and exact read grants.
+or write files. RBL1 permits only bounded loops under fuel/resource limits; the older RBT pipeline has no loops. A host runner binds a project root and exact read grants.
 Source/bytecode is untrusted; validate it before interpreting it.
 
 A bounded language is not an OS sandbox or a proof of benign intent. Host code,
@@ -29,10 +29,9 @@ at https://jacknrose.co.uk/rosebyte. Do not post exploit payloads or secrets in
 public chat/issues. GitHub private vulnerability reporting may be enabled by the
 repository owner; do not assume it is enabled before checking.
 
-## Public-source and host boundary
+## Encrypted-core and host boundary
 
-The compiler/interpreter is Python; RB examples contain the application logic.
-The public repository can be copied and used offline without a hosted passkey.
+The RBL1 compiler emitter is RB; its native VM is C and the independent reference VM is Python. The older RBT compatibility engine remains Python. The current public repository contains specifications, examples and an owner-encrypted core artifact. Plaintext implementation and full tests are private. Earlier public copies may still exist and cannot be retracted.
 No passkey or revocation mechanism can withdraw plaintext already delivered.
 The service implementation and production keys/ledgers are not in this repository.
 Online hosted keys are not an HSM: compromise of the authorised host process or
