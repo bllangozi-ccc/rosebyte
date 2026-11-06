@@ -1,0 +1,11 @@
+{
+  "version": "hosted-inbox-20261106",
+  "encrypted_artifact": "rosebyte-inbox-update-20261106.rbenc",
+  "ciphertext_sha256": "a1e6ef8fe6b2e01fc4e576a2697ca5ae2b941a11570bd15fec59b136b42cfffd",
+  "ciphertext_bytes": 53820,
+  "plaintext_archive_sha256": "7aa9a3b90e5494fd09bfef69c6a07b55916fdbf0bc4651cac1724cc1469d0ea3",
+  "recipient_fingerprint": "2368165c6f099481d3d7b743853932a923cec40f15b2eb2fb47a0c8f8ce43607",
+  "hosted_tests": 67,
+  "live_signed_inbox": true,
+  "owner_decryption": "not separately requested; sealed to the existing verified recipient"
+}

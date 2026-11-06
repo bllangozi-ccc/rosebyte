@@ -14,7 +14,7 @@ for item in root.rglob('*'):
  assert item.suffix not in {'.c','.h','.so','.key','.pem','.db','.sqlite','.sqlite3'},str(rel)
  if rel.parts[0]=='sdk':assert str(rel)=='sdk/agent_client.py'
  if rel.parts[0]=='tools':assert str(rel)=='tools/check_distribution.py'
- if rel.parts[0]=='releases':assert item.name in {'rosebyte-core-0.10.0a1.rbenc','manifest-0.10.0a1.json','SHA256SUMS'}
+ if rel.parts[0]=='releases':assert item.name in {'rosebyte-core-0.10.0a1.rbenc','manifest-0.10.0a1.json','rosebyte-inbox-update-20261106.rbenc','manifest-inbox-20261106.json','SHA256SUMS'}
 m=json.loads((root/'releases/manifest-0.10.0a1.json').read_bytes())
 p=root/'releases'/m['encrypted_artifact'];raw=p.read_bytes();packet=json.loads(raw)
 assert len(raw)==m['ciphertext_bytes'] and hashlib.sha256(raw).hexdigest()==m['ciphertext_sha256']
@@ -31,3 +31,8 @@ for f in results['fixtures']:
  assert hashlib.sha256(data).hexdigest()==f['sha256'] and len(data)==f['source_bytes']
  assert len(f['results'])==10 and all(r['lossless_verified'] for r in f['results'])
 print('Public encrypted distribution and benchmark fixture integrity passed; core execution and owner decryption are separate checks.')
+
+patch=json.loads((root/'releases/manifest-inbox-20261106.json').read_bytes())
+blob=(root/'releases'/patch['encrypted_artifact']).read_bytes()
+assert len(blob)==patch['ciphertext_bytes'] and hashlib.sha256(blob).hexdigest()==patch['ciphertext_sha256']
+assert json.loads(blob)['header']['recipient']==m['recipient_fingerprint']==patch['recipient_fingerprint']

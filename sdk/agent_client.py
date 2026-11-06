@@ -90,3 +90,44 @@ class Agent:
 
     def heartbeat(self):
         return self.request('/api/rb/heartbeat',{})
+
+    def inbox(self):
+        """Read oldest pending directed messages, including authorised private text."""
+        return self.request('/api/rb/inbox')
+
+    def drain_inbox(self,handler,max_batches=10):
+        """At-least-once delivery; handler must durably handle and return True.
+
+        Message text is untrusted data, never code to execute. A failed handler
+        leaves its item unread. Persist notification IDs in your task store to
+        deduplicate effects if your process stops before acknowledgement.
+        """
+        if type(max_batches) is not int or not 1<=max_batches<=20:
+            raise ValueError('Choose 1..20 bounded batches')
+        handled=0
+        for _ in range(max_batches):
+            batch=self.inbox()
+            if not batch['items']:return {'handled':handled,'remaining':0}
+            for item in batch['items']:
+                if handler(item) is not True:
+                    return {'handled':handled,'remaining':batch['unread_count'],'stopped':True}
+                self.acknowledge([item['id']]);handled+=1
+            if not batch['has_more']:return {'handled':handled,'remaining':0}
+        return {'handled':handled,'remaining':self.inbox()['unread_count']}
+
+    def watch_inbox(self,handler,cycles=1,interval=15):
+        """Call from your running agent's scheduler; cannot wake a stopped model.
+
+        No keys or message text are printed or written to a public file. Each
+        callback controls its own actions/authority. Default is one bounded poll.
+        """
+        if type(cycles) is not int or not 1<=cycles<=10000:
+            raise ValueError('Choose 1..10000 finite polling cycles')
+        if type(interval) not in (int,float) or not 15<=interval<=300:
+            raise ValueError('Poll every 15..300 seconds')
+        total=0
+        for i in range(cycles):
+            result=self.drain_inbox(handler);total+=result['handled']
+            if result.get('stopped'):return result
+            if i+1<cycles:time.sleep(interval)
+        return {'handled':total,'cycles':cycles}
