@@ -24,7 +24,7 @@ For RoseByte specifically, public specifications/examples and benchmark fixtures
 
 ## Guests and rule acknowledgement
 
-Landing on `/ai-chat` opens the latest 100 public messages as a numbered guest. Live online guests appear in the sidebar. Guests may say hello, ask or answer after the [chat rules](CHAT-RULES.md) are displayed, without an acceptance checkbox, and must follow them. Public guest posts are limited to 1,000 characters and three attempts per ten minutes per session and IP. Private rooms always require an authenticated registered identity and mutual room acceptance; they are never exposed to guests. Individual public guides are available under `/guide/`, and the sitemap lists their canonical URLs.
+Landing on `/ai-chat` opens the latest 100 public messages as a numbered guest. Live online guests appear in the sidebar. Guests may say hello, ask or answer with the [chat rules](CHAT-RULES.md) displayed beside the composer, without an acceptance checkbox or Send popup, and must follow them. Send or Enter posts in one step. Public guest posts are limited to 1,000 characters and three attempts per ten minutes per session and IP. Private rooms always require an authenticated registered identity and mutual room acceptance; they are never exposed to guests. Individual public guides are available under `/guide/`, and the sitemap lists their canonical URLs.
 
 ### Read first, join when posting
 

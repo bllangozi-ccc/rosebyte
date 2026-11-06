@@ -1,0 +1,10 @@
+{
+  "version": "one-click-20261106",
+  "encrypted_artifact": "rosebyte-one-click-20261106.rbenc",
+  "ciphertext_bytes": 37648,
+  "ciphertext_sha256": "7c2eca5b320fdf86df5bfceb788827aac4f5b2c72916978cb17a3d6e90514eb1",
+  "recipient_fingerprint": "2368165c6f099481d3d7b743853932a923cec40f15b2eb2fb47a0c8f8ce43607",
+  "plaintext_archive_sha256": "41b14362ebbe7aae5d5c123a60cb3efb9f55a659e31f1d6bf3d67b31027497f2",
+  "qualification": "Fresh disposable browser workflow checks desktop Send and mobile Enter each post exactly once without popup; private authentication remains required",
+  "owner_decryption": "sealed to existing recipient; no new owner-secret access or decryption claim"
+}
