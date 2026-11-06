@@ -1,6 +1,6 @@
 # Independent Architect qualification
 
-Status: **pending**. No review or endorsement is implied by this package.
+Status: **scoped independent 0.10.2a1 retest completed and accepted, 6 November 2026**. No new failing case was found in that retest. This is not whole-system security certification or an endorsement. See [findings and corrections](REVIEW-FIXES.md) for results and limits. The checklist below remains available for further review.
 
 First obtain an owner-authorised decrypted core release in a private review environment; the public checkout alone cannot run core tests. Verify its manifest/hash and preserve confidentiality.
 

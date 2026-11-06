@@ -24,8 +24,23 @@ Native qualification additionally passed60core/native checks including sanitizer
 
 Every compile/run/bootstrap now tests its loaded JSON library for the known raw/supplementary failures. `rosebyte-native --check-library` exposes that check; `--version` reports the loaded version. Unqualified decoders fail before processing user programs. The release-local package was authenticated with signed Debian archive metadata, scanned through/incoming and hash-pinned; third-party licence notices are included. Qualified binary platform:Linuxx86_64/glibc>=2.38, testedUbuntu24.04. Other platforms require their own maintained compatible library/build and qualification.
 
-Previously corrupted output cannot be reconstructed without the original source. Recompile affected source with the qualified runtime; no historical tasks or artifacts are replayed automatically. Upstream reports:[json-c#875](https://github.com/json-c/json-c/issues/875),[#892](https://github.com/json-c/json-c/issues/892). Final independent retesting of this update is requested; no security certification is claimed.
+Previously corrupted output cannot be reconstructed without the original source. Recompile affected source with the qualified runtime; no historical tasks or artifacts are replayed automatically. Upstream reports:[json-c#875](https://github.com/json-c/json-c/issues/875),[#892](https://github.com/json-c/json-c/issues/892). Independent retesting of this update passed within the scope recorded below; no security certification is claimed.
 
 ## Review status
 
 The reviewer reports consistent codec baselines/envelope sizes, independent application cases, sanitizer and isolated scanner checks. Those are review evidence for the tested cases, not a completed security certification or general performance superiority. Production scanner freshness is checked separately on Root94. No private conversations, source patches, keys or project data are published here. Further findings remain welcome through the private review workflow.
+
+## Independent 0.10.2a1 retest — accepted 6 November 2026
+
+The reviewer verified the delivered archive hash, used a fresh original source copy, rebuilt with warnings treated as errors and reported no new failing case in this bounded retest:
+
+- 60 supplied core/native tests passed.
+- A separately authored corpus passed 220 raw/escaped Unicode compile-and-execute cases; native and reference bytecode/results matched. Original raw UTF-8 and supplementary-escape failures no longer reproduced.
+- 1,000 application cases matched both implementations and a separate oracle; eight invalid/overflow cases were rejected.
+- 19 malformed JSON cases were rejected. A 60,000-byte raw UTF-8 value returned exactly.
+- Separate ASan and UBSan builds each ran 648 malformed/valid bytecode cases without sanitizer diagnostics.
+- The supplied exhaustive single-scalar decoder probe was replayed independently: 1,112,064 escaped and 1,112,030 permitted raw scalar cases had zero mismatches with release-local json-c 0.19. This was a replayed supplied probe, distinct from the independently authored 220-case VM corpus.
+- Bootstrap, release-library resolution and rejection of injected known-bad json-c 0.18 passed.
+- Sixteen isolated scanner/production-binary fixture checks passed, including unavailable-scanner and wrong-peer rejection.
+
+Limits: the scanner fixture used a custom local EICAR signature and synthetic freshness marker; it does not qualify production signature freshness. The reviewer did not independently repeat Debian APT signature-chain retrieval, test the current hosted deployment or establish whole-server safety. Compiler/platform differences produced an environment-specific binary hash; the delivered library ELF hash matched. No new speed or compression advantage is claimed from these correctness tests. Full logs and private review source remain confidential.
